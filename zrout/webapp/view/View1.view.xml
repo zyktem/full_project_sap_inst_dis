@@ -1,0 +1,40 @@
+<mvc:View controllerName="zrout.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    
+     displayBlock="true"
+    xmlns="sap.m"
+    
+    >
+    <Page id="page" title="View1">
+        <content>
+            <Button text = "next page" press = "oAction"/>
+        </content>
+        <!-- <Table
+        id = "table">
+        <columns>
+                    <Column id="nameColumn">
+                        <Text text="column A" />
+                    </Column>
+                    <Column id="unitNumberColumn" hAlign="End">
+                        <Text text="{i18n>tableUnitNumberColumnTitle}" id="unitNumberColumnTitle" />
+                    </Column>
+                </columns>
+
+        </Table> -->
+        <List
+		    id="listId"
+            headerText="Products"
+            mode="Delete"
+            selectionChange="selectChange"
+		    items="{oData>/value}"
+            delete="handleDelete" >
+		<StandardListItem
+			title="{oData>ProductID}"
+			description ="{oData>ProductName}"
+            
+            
+            /> 
+	</List>
+        
+    </Page>
+</mvc:View>

@@ -1,0 +1,17 @@
+<mvc:View controllerName="zrout.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="View2">
+        <content>
+        <Button id ="btn"
+		text="Say Hello"
+		press=".onShowHello"></Button>
+	<Input
+        id ="input"
+		value="{/recipient/name}"
+		description=" {/recipient/name}"
+		valueLiveUpdate="true"
+		width="60%"/>
+        </content>
+    </Page>
+</mvc:View>

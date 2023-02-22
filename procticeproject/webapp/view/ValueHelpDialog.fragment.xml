@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialog"
+		title="ProductName"
+		items="{/Alphabetical_list_of_products}"
+		search=".onValueHelpSearch"
+		confirm=".onValueHelpClose"
+		cancel=".onValueHelpClose">
+		<StandardListItem
+			
+		
+			
+			title="{ProductName}"
+			 />
+	</SelectDialog>
+</core:FragmentDefinition>

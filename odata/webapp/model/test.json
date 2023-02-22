@@ -1,0 +1,26 @@
+{
+    "Employee" : [
+        {
+           "Name" : "Dev",
+           "EmployeeID" : 1,
+           "Age" : 23,
+           "Current Status" : "Bench",
+           "Word" : ""
+        },
+        {
+            "Name" : "Mahima",
+            "EmployeeID" : 2,
+            "Age" : 24,
+            "Current Status" : "Shadow",
+            "Word" : ""
+        },
+        {
+            "Name" : "Srinjoy",
+            "EmployeeID" : 3,
+            "Age" : 25,
+            "Current Status" : "Shadow",
+            "Word" : ""
+        }
+        
+    ]
+}

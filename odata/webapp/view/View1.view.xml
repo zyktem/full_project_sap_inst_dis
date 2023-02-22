@@ -1,0 +1,89 @@
+<mvc:View xmlns:control="sap.gantt.control" controllerName="odata.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content> 
+            <Table id = "table" items="{NorthWind>/value}">
+               <columns>
+                    <Column>
+                        <Text text="ProductID"/>
+                    </Column>
+                    <Column>
+                        <Text text="ProductName"/>
+                    </Column>
+                    <Column>
+                        <Text text="UnitsInStock"/>
+                    </Column>
+                    <Column>
+                        <Text text="QuantityPerUnit"/>
+                    </Column>
+                    <Column>
+                        <Text text="Price"/>
+                    </Column>
+               </columns>
+               <items>
+                <ColumnListItem >
+                    <cells>
+                        <Text text="{NorthWind>ProductID}"/>
+                        <Text text="{NorthWind>ProductName}"/>
+                        <Text text="{NorthWind>UnitsInStock}"/>
+                        <Text text="{NorthWind>QuantityPerUnit}"/>
+                        <Text text="{NorthWind>UnitPrice}"/>
+                    </cells>
+                </ColumnListItem>
+                
+                </items> 
+            </Table>
+            <Table id = "tableCustomers" items="{NorthWindCustomers>/value}">
+               <columns>
+                    <Column>
+                        <Text text="CustomerID"/>
+                    </Column>
+                    <Column>
+                        <Text text="CompanyName"/>
+                    </Column>
+                    <Column>
+                        <Text text="ContactName"/>
+                    </Column>
+                    <Column>
+                        <Text text="ContactTitle"/>
+                    </Column>
+                    <Column>
+                        <Text text="Address"/>
+                    </Column>
+               </columns>
+               <items>
+                <ColumnListItem >
+                    <cells>
+                        <Text text="{NorthWindCustomers>CustomerID}"/>
+                        <Text text="{NorthWindCustomers>CompanyName}"/>
+                        <Text text="{NorthWindCustomers>ContactName}"/>
+                        <Text text="{NorthWindCustomers>ContactTitle}"/>
+                        <Text text="{NorthWindCustomers>Address}"/>
+                    </cells>
+                </ColumnListItem>
+                
+                </items> 
+            </Table>
+            <Panel>
+            <Button
+                text="Click"
+                press=".onShowHello"/> 
+             <Input
+                id="InputField"
+                placeholder="Input Value"
+                valueLiveUpdate="true"
+                liveChange="ValueChange"
+                showClearIcon="true"
+                width="60%"/>
+
+            </Panel>
+            <!-- <List id = "listTxt"
+            headerText="Customers"
+            items="{'/Products'}">
+            <StandardListItem
+			    title="{ProductID}"/>
+            </List> -->
+        </content>
+    </Page>
+</mvc:View>

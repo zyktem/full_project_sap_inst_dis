@@ -1,0 +1,92 @@
+<mvc:View controllerName="demo.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+>
+
+    
+    <Page id="page" title="{i18n>title}">
+        <content>
+           <Button id ="btn" text = "Say hi with dialog" 
+           icon="sap-icon://world"
+           press = ".onPress"></Button>
+
+        
+
+
+           <Input id="idInp"
+      value="{/recipient/name}"
+      description="Hello {/recipient/name}"
+      valueLiveUpdate="true"
+      width="80%"/>
+
+
+           	<!-- <List 
+                id ="idList"
+		        headerText="Products"
+		        items="{/Invoices}"
+                
+                mode="Delete"
+                delete="handleDelete"
+                includeItemInSelection="true">
+
+                <items>
+                 <StandardListItem
+                id ="stndItm"
+			    title="{ProductName}"
+			   
+                description="{Quantity}"
+                detailPress=".onPressDetail"/>
+
+                
+            
+                
+                </items>
+		   
+    <headerToolbar>
+            <Toolbar>
+            <Title text="{i18n>invoice}"/>
+            <ToolbarSpacer/>
+            <SearchField width="50%" search=".onFilterInvoices"/>
+         </Toolbar>
+      </headerToolbar>
+      
+
+                
+	</List> -->
+
+
+    <List id = "list"
+		headerText="Products"
+		class="sapUiResponsiveMargin"
+		width="auto"
+		items="{goods>/Invoices}">
+		<items>
+			<ObjectListItem id = "objLst"
+				title="{goods>ProductName} x {goods>Quantity}"
+				number = "{
+                           path : 'goods>ExtendedPrice',
+                           type : 'sap.ui.model.type.Integer'
+                           }"
+                numberUnit="{view>/currency}"
+                numberState="{= ${goods>ExtendedPrice} > '50' ? 'Error' : 'Success' }"
+                >
+                <firstStatus>
+				<ObjectStatus
+                    id = "objStatus"
+					text= "{
+                            path : 'goods>Status',
+                            formatter:'.formatter.statusText'
+                            }"
+                        />
+            	 
+			</firstStatus>
+				
+            </ObjectListItem>
+            
+                
+		</items>
+	</List>
+    
+        </content>
+    </Page>
+</mvc:View>

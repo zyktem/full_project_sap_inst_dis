@@ -1,0 +1,40 @@
+<mvc:View
+    controllerName="procticeproject.controller.Object"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic">
+
+    <semantic:SemanticPage
+        id="page"
+        headerPinnable="false"
+        toggleHeaderOnTitleClick="false"
+        busy="{objectView>/busy}"
+        busyIndicatorDelay="{objectView>/delay}">
+        
+
+        <semantic:titleHeading>
+            <Title id = "title"
+                text="{ProductName}"
+                level="H2"/>
+                
+        </semantic:titleHeading>
+
+        <semantic:headerContent>
+            <ObjectNumber id ="abjNum"
+                number="{
+                    path: 'UnitPrice',
+                    formatter: '.formatter.numberUnit'
+                }" />
+        </semantic:headerContent>
+        <Button id  = "navBtn" text = "Navigate" press = ".onNavigate"></Button>
+
+        <!-- <semantic:sendEmailAction>
+            <semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+        </semantic:sendEmailAction>
+         -->
+
+        
+        	
+    </semantic:SemanticPage>
+
+</mvc:View>

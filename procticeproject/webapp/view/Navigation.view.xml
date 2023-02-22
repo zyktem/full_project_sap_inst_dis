@@ -1,0 +1,23 @@
+<mvc:View controllerName="procticeproject.controller.Navigation"
+ xmlns="sap.m" 
+ xmlns:mvc="sap.ui.core.mvc" 
+ xmlns:core="sap.ui.core" 
+ xmlns:fb="sap.ui.comp.filterbar" 
+ xmlns:semantic="sap.f.semantic"
+ xmlns:smartTable="sap.ui.comp.smarttable">
+    	<smartTable:SmartTable id = "smtbl" entitySet="Alphabetical_list_of_products"
+			smartFilterId="smartFilterBar" useExportToExcel="true" 
+			useVariantManagement="false" useTablePersonalisation="true" header="Products"
+			showRowCount="true" 
+			enableAutoBinding="true" class="sapUiResponsiveContentPadding" enableAutoColumnWidth="true"
+			initiallyVisibleFields="ProductID,ProductName,SupplierID"
+			>
+			<!-- layout data used to make the table growing but the filter bar fixed -->
+			<smartTable:layoutData>
+				<FlexItemData growFactor="1" baseSize="0%" />
+			</smartTable:layoutData>
+		</smartTable:SmartTable>
+
+
+</mvc:View>
+
