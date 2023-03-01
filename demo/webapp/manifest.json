@@ -95,6 +95,11 @@
       "routes": [
         {
           "name": "RouteView1",
+          "pattern": "",
+          "target": "TargetView1"
+        },
+        {
+          "name": "tile",
           "pattern": ":?query:",
           "target": [
             "TargetView1"
