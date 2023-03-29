@@ -1,7 +1,7 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Tue Mar 28 2023 19:50:07 GMT+0530 (India Standard Time)|
+|**Generation Date and Time**<br>Wed Mar 29 2023 15:51:31 GMT+0530 (India Standard Time)|
 |**App Generator**<br>@sap/generator-fiori-freestyle|
 |**App Generator Version**<br>1.8.4|
 |**Generation Platform**<br>Visual Studio Code|
@@ -9,7 +9,7 @@
 |**Service Type**<br>None|
 |**Service URL**<br>N/A
 |**Module Name**<br>covidtraker|
-|**Application Title**<br>Covid Traker|
+|**Application Title**<br>Covid-19 Traker|
 |**Namespace**<br>Traker|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.109.3|

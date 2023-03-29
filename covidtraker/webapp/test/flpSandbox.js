@@ -39,7 +39,7 @@ sap.ui.define([
 							"tiles": [{
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
-									"title": "Covid Traker",
+									"title": "Covid-19 Traker",
 									"targetURL": "#Trakercovidtraker-display"
 								}
 							}]
@@ -55,7 +55,7 @@ sap.ui.define([
 								"semanticObject": "Trakercovidtraker",
 								"action": "display",
 								"description": "A Fiori application.",
-								"title": "Covid Traker",
+								"title": "Covid-19 Traker",
 								"signature": {
 									"parameters": {}
 								},
