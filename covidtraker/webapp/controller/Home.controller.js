@@ -4,7 +4,8 @@ sap.ui.define([
     "sap/ui/model/json/JSONModel",
     
     "sap/viz/ui5/format/ChartFormatter",
-    "sap/viz/ui5/api/env/Format",
+    "sap/viz/ui5/api/env/Format"
+    
 
 ],
     /**
@@ -14,16 +15,17 @@ sap.ui.define([
         "use strict";
 
         return Controller.extend("Traker.covidtraker.controller.Home", {
-            dataPath : "../../model/test.json",
+            dataPath : "../model/test.json",
             
             oVizFrame : null,
+
              onInit: function () {
-                // var odata = "../model/test.json" ;
-                // var odataModel = new JSONModel(odata);
-                // this.getView().setModel(odataModel,"testData")
+               
                 Format.numericFormatter(ChartFormatter.getInstance());
                 var formatPattern = ChartFormatter.DefaultPattern;
-                // set explored app's demo model on this sample
+                // var Data1 = this.getOwnerComponent().getModel("devraj");
+                // this.getView().setModel(Data1);
+                
 
     
                 var oVizFrame = this.oVizFrame = this.getView().byId("idVizFrame");
@@ -52,14 +54,15 @@ sap.ui.define([
                         text: 'Revenue by City and Store Name'
                     }
                 });
-                var dataModel = new JSONModel(this.dataPath);
-                oVizFrame.setModel(dataModel);
+                
     
-                var oPopOver = this.getView().byId("idPopOver");
-                oPopOver.connect(oVizFrame.getVizUid());
-                oPopOver.setFormatString(formatPattern.STANDARDFLOAT);
+                var Data1 = new JSONModel(this.dataPath);
+                this.getView().setModel(Data1);
+                // var oPopOver = this.getView().byId("idPopOver");
+                // oPopOver.connect(oVizFrame.getVizUid());
+                // oPopOver.setFormatString(formatPattern.STANDARDFLOAT);
     
-                //InitPageUtil.initPageSettings(this.getView()); 
+                
 
                 
 
@@ -72,7 +75,11 @@ sap.ui.define([
             },
             onGrph: function(){
                 console.log("showing graph")
+            },
+            testPress : function(){
+                console.log("test")
             }
+
         });
     });
  
