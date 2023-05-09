@@ -29,12 +29,7 @@
 			</Toolbar>
 <Table id="idProductsTable"
 		inset="false"
-		items="{
-			path: '/ProductCollection',
-			sorter: {
-				path: 'Name'
-			}
-		}">
+		items="{vacc>/}">
 
 		<infoToolbar>
 			<OverflowToolbar>
@@ -68,15 +63,9 @@
 		<items>
 			<ColumnListItem vAlign="Middle">
 				<cells>
-					
+					<Text text = "{oVacc>vacc}"></Text>
 
-					<ObjectNumber
-							number="{
-								parts:[{path:'Price'},{path:'CurrencyCode'}],
-								type: 'sap.ui.model.type.Currency',
-								formatOptions: {showMeasure: false}
-							}"
-							unit="{CurrencyCode}" />
+					 />
 				</cells>
 			</ColumnListItem>
 		</items>
