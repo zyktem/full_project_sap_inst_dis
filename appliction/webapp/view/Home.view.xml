@@ -1,0 +1,121 @@
+<mvc:View controllerName="appliction.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	xmlns:unified="sap.ui.unified"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Toolbar>
+				<Button type="Back" press="onPress" />
+				<ToolbarSpacer/>
+				<Title text="Vaccination Tracker in SAP" level="H2"/>
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://edit" type="Transparent" press="onPress" ariaLabelledBy="editButtonLabel"/>
+			</Toolbar>
+
+            			<Toolbar>
+				<ToolbarSpacer/>
+					<RadioButton
+						valueState = "Success"
+						text="View in Table"
+						selected="{oView>/table}">
+					</RadioButton>
+					<RadioButton
+						valueState = "Error"
+						text="View in Calendar"
+						selected="{oView>/calendar}">
+					</RadioButton>
+				<ToolbarSpacer/>
+			</Toolbar>
+
+            <Table id="idProductsTable"
+		inset="false"
+		items="{oVacc>/}"
+		visible="{oView>/table}">
+
+		<infoToolbar>
+			<OverflowToolbar>
+				<Label text="Vaccination Dashboard"/>
+			</OverflowToolbar>
+		</infoToolbar>
+		<columns>
+			<Column
+				width="12em">
+				<Text text="Vaccination Name" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true">
+				<Text text="Company" />
+			</Column>
+			<Column
+				minScreenWidth="Desktop"
+				demandPopin="true"
+				hAlign="End">
+				<Text text="Date of Appointment" />
+			</Column>
+			<Column
+				minScreenWidth="Desktop"
+				demandPopin="true"
+				hAlign="Center">
+				<Text text="Type of Vaccination" />
+			</Column>
+
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<Text text = "{oVacc>vacc}"></Text>
+					<Text text = "{oVacc>company}"></Text>
+					<ObjectNumber number = "{oVacc>date}" state="{path:'oVacc>date', formatter: '.formateState'}" ></ObjectNumber>
+					<Text text = "{oVacc>type}"></Text>
+					
+					
+				
+
+					 
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+
+
+
+	<SinglePlanningCalendar
+			id="SPC1"
+			class="sapUiSmallMarginTop"
+			title= "My Calendar"
+			visible="{oView>/calendar}"
+			appointments="{path:'oVacc>/'}"
+			>
+
+			<views>
+				<SinglePlanningCalendarDayView key="DayView" title="Day" />
+				<SinglePlanningCalendarWorkWeekView key="WorkWeekView" title="Work Week" />
+				<SinglePlanningCalendarWeekView key="WeekView" title="Week" />
+				<SinglePlanningCalendarMonthView key="MonthView" title="Month" />
+			</views>
+
+			<appointments>
+				<unified:CalendarAppointment
+					title= "{oVacc>vacc}"
+					text= "{oVacc>company}"
+					type="{oVacc>vtype}"
+					
+					startDate="{path:'oVacc>date', formatter: '.formateDate'}"
+					endDate="{path:'oVacc>date', formatter: '.formateDate'}"
+					
+				>
+				</unified:CalendarAppointment>
+			</appointments>
+			
+			
+
+			
+		</SinglePlanningCalendar>
+
+
+
+        </content>
+    </Page>
+</mvc:View>
