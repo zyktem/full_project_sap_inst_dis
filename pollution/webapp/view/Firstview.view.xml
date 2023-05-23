@@ -1,0 +1,54 @@
+<mvc:View
+    xmlns:f="sap.f"
+    controllerName="pollution.controller.Firstview"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    height="100%"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <SplitContainer id="splt">
+            <detailPages>
+                 <List
+                        id="ShortProductList5"
+                        headerText="Products"
+                        items="{oView>/}"
+                        itemPress=".oPress"
+                    >
+                        <items>
+                            <StandardListItem
+                                id="sdt7"
+                                type="Navigation"
+                                title="{oView>country}"
+                                
+                            />
+                        </items>
+                    </List>
+
+            </detailPages>
+
+            <masterPages>
+                <Page id="master">
+                    <List
+                        id="ShortProductList"
+                        headerText="Products"
+                        items="{oView>/}"
+                        itemPress=".oPress"
+                    >
+                        <items>
+                            <StandardListItem
+                                id="sdt"
+                                type="Navigation"
+                                title="{oView>country}"
+                                
+                            />
+                        </items>
+                    </List>
+                </Page>
+            </masterPages>
+        </SplitContainer>
+    </Page>
+</mvc:View>
