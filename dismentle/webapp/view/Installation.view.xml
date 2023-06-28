@@ -1,0 +1,125 @@
+<mvc:View
+    controllerName="dismentle.controller.installation"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+>
+    <Page
+        id="page"
+        title="Installtion"
+    >
+        
+<!-- 
+        <Panel headerText="Installation">
+				<FlexBox direction="Column" alignItems="Start">
+				<Label text="operation" labelFor="input-a" required="true" />
+                	<ComboBox id = "combForLble"/>
+			    </FlexBox>
+           
+		</Panel>
+       
+        <Panel headerText="Installation">
+         <FlexBox direction="Column" alignItems="Start">
+        <Label text="Meterial:" labelFor="input-a" required="true" />
+        <Input id = "input-met" width="12.5rem" ></Input>
+        <Label text="Serial Number:" labelFor="input-a" required="true" />
+        <Input id = "input-seri" width="12.5rem" ></Input>
+        <Label text="Equipment:" labelFor="input-a" required="true" />
+        <Input id = "input-equip" width="12.5rem" ></Input>
+        <Label text="Plant:" labelFor="input-a" required="true" />
+        <Input id = "input-plnt" width="12.5rem" ></Input>
+        <Label text="Stor. Loction:" labelFor="input-a" required="true" />
+        <Input id = "input-stor" width="12.5rem" ></Input>
+        </FlexBox>
+        </Panel> -->
+
+
+<!-- <f:SimpleForm id="SimpleForm1"
+
+                editable="false"
+
+                layout="ResponsiveGridLayout"
+
+                title="Address"
+
+                labelSpanXL="3"
+
+                labelSpanL="3"
+
+                labelSpanM="3"
+
+                labelSpanS="12"
+
+                adjustLabelSpan="false"
+
+                emptySpanXL="4"
+
+                emptySpanL="4"
+
+                emptySpanM="4"
+
+                emptySpanS="0"
+
+                columnsXL="1"
+
+                columnsL="1"
+
+                columnsM="1"
+
+                singleContainerFullSize="false">
+
+                <f:content>
+
+                    <Label text="Name" />
+
+                    <Input id="nameText" placeholder="SupplierName" />
+
+                    <Label text="Street/No." />
+
+                    <Input placeholder="Street HouseNumber" />
+
+                    <Label text="ZIP Code/City" />
+
+                    <Input placeholder="ZIPCode City" />
+
+                    <Label text="Country" />
+
+                    <Input id="countryText1" placeholder="Country1">
+
+                        <layoutData>
+
+                            <l:GridData span="XL1 L1 M3 S4" />
+
+                        </layoutData>
+
+                    </Input>
+
+                    <Input id="countryText2" placeholder="Country2">
+
+                        <layoutData>
+
+                            <l:GridData span="XL1 L2 M2 S4" />
+
+                        </layoutData>
+
+                    </Input>
+
+                    <Input id="countryText3" placeholder="Country3">
+
+                        <layoutData>
+
+                            <l:GridData span="XL1 L2 M2 S4" />
+
+                        </layoutData>
+
+                    </Input>
+
+                </f:content>
+
+            </f:SimpleForm> -->
+            <Button id = "iywes" text = "dev"></Button>
+
+
+    </Page>
+</mvc:View>

@@ -1,0 +1,201 @@
+<mvc:View
+    controllerName="dismentle.controller.Home"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:m="sap.m" 
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    
+    
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+      
+
+        <Panel headerText="Operations">
+         <!--Now radio button group-->
+               
+        <OverflowToolbar height="auto"> 
+         <ToolbarSpacer/>
+            <RadioButtonGroup id="rbg4" class="sapUiMediumMarginBottom" columns="2" select="oSelection" >
+			<RadioButton id="RB4-1" text="{i18n>textRdB1}" selected="true" />
+			<RadioButton id="RB4-2" text="{i18n>textRdb2}" />
+		    </RadioButtonGroup>
+      <ToolbarSpacer/>
+      </OverflowToolbar>
+        <!-- fields and inputs -->
+        </Panel>
+             <f:SimpleForm
+                id="SimpleFormToolbar"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="4"
+                labelSpanL="3"
+                labelSpanM="4"
+                labelSpanS="12"
+                adjustLabelSpan="true"
+                visible="true"
+            >
+                <Label
+                    id="_IDGenLabel4"
+                    text="{i18n>labEquip}"
+                    labelFor="input-a"
+                    required="true"
+                    />
+
+
+
+
+                <Input
+                id="input-equip"
+                width="20rem"
+                />
+                <Label
+                    id="_IDGenLabel5"
+                    text="{i18n>labEquip}"
+                    labelFor="input-a"
+                    required="true"
+                />
+                <SearchField width="20rem" id="ser" search=".onSearch"/>
+                  <Label
+                    id="_IDGenLabel7"
+                    text="{i18n>labFunc}"
+                    labelFor="input-a"
+                    required="true"
+                />
+
+
+
+
+                <Input
+
+                    id="input-funloc"
+
+                    width="20rem"
+
+                />
+
+
+
+
+                <Label
+
+                    id="_IDGenLabel8"
+
+                    text="{i18n>labSup}"
+
+                    labelFor="input-a"
+
+                    required="true"
+
+                />
+
+
+
+
+                <Input
+
+                    id="input-superord.equip"
+
+                    width="20rem"
+
+                />
+                 
+
+
+
+                <Label
+
+                    id="_IDGenLabel9"
+
+                    text="{i18n>labStat}"
+
+                    labelFor="input-a"
+
+                    required="true"
+
+                />
+                <Input
+
+                    id="input-Status.equip"
+
+                    width="20rem"
+
+
+                />
+                 </f:SimpleForm>
+
+
+               <!-- under process for the date and time fields -->
+                 <f:SimpleForm>
+              
+                    <m:FlexBox
+                        
+                         alignItems="Center"
+                         justifyContent="Center"
+                         >
+                    
+                    <Label text="Install/Dismamtle Date: "/>
+
+                    
+
+                    <Input id="countryText2" placeholder="Date" width="50%">
+
+                        <layoutData>
+
+                            <l:GridData span="XL1 L2 M2 S4" />
+
+                        </layoutData>
+
+                    </Input>
+                    
+                    <Label text="Install/Dismamtle Time: "/>
+
+                    <Input id="inpTime" placeholder="Time"  width="50%">
+
+                        <layoutData>
+
+                            <l:GridData span="XL1 L2 M2 S4" />
+
+                        </layoutData>
+
+                    </Input>
+                  
+                    </m:FlexBox>
+                   </f:SimpleForm>
+
+                   <!-- footer section with button -->
+               
+            <footer>
+
+            <OverflowToolbar id="otbFooter">
+
+                <ToolbarSpacer/>
+
+                <Button type="Accept" text="{i18n>btnAccp}" press=".oAccept">
+
+                    <layoutData><OverflowToolbarLayoutData priority="NeverOverflow" /></layoutData>
+
+                </Button>
+
+                <Button type="Reject" text="{i18n>btnRejc}">
+
+                    <layoutData><OverflowToolbarLayoutData priority="NeverOverflow" /></layoutData>
+
+                </Button>
+
+                <ToolbarSpacer/>
+                 </OverflowToolbar>
+
+        </footer>
+       
+
+
+  
+
+    </Page>
+</mvc:View>

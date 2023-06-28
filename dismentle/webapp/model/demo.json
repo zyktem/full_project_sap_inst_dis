@@ -1,0 +1,34 @@
+{
+    "value": [
+        {
+            "Equipment": "101",
+            "function loc": "11",
+            "Superord.Equip": "222"
+        },
+        {
+            "Equipment": "102",
+            "function loc": "12",
+            "Superord.Equip": "223"
+        },
+        {
+            "Equipment": "103",
+            "function loc": "13",
+            "Superord.Equip": "223"
+        },
+        {
+            "Equipment": "104",
+            "function loc": "14",
+            "Superord.Equip": "224"
+        },
+        {
+            "Equipment": "105",
+            "function loc": "15",
+            "Superord.Equip": "225"
+        },
+        {
+            "Equipment": "106",
+            "function loc": "16",
+            "Superord.Equip": "226"
+        }
+    ]
+}
