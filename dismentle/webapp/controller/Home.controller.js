@@ -16,159 +16,97 @@ sap.ui.define([
 
         return Controller.extend("dismentle.controller.Home", {
              onInit: function () {
-            //set data model for the combobox
-            //     let dataPath = "../model/operation.json";
-            //     let dataModel = new JSONModel(dataPath);
-            //     this.getView().setModel(dataModel, "myData");
-            //adding laguages
+				var i18nModel = new ResourceModel({
+					bundleName: "dismentle.i18n.i18n"
+				});
+				this.getView().setModel(i18nModel, "i18n");
+				this.oBundle = this.getView().getModel("i18n").getResourceBundle();
+			},
+			oSelection: function (oEvent) {
 
-            // var oLang =  sap.ui.getCore().getConfiguration().getLanguage();
-            // var i18nPath = "i18n/i18n";
-            // if(oLang==="de_DE"){
-            //     i18nPath = i18nPath + "_de.properties";
-            // }else if(oLang === "fr_")
+				if (oEvent.getSource().getSelectedButton().getId().slice(-5) === "RB4-1") {
+					this.byId("btnAcc").setText(this.oBundle.getText('btnInstall'));
+					this.byId("ser").setVisible(false);
+					this.byId("input-equip").setVisible(true);
+					this.byId("input-equip").setValue(null);
+					this.byId("input-funloc").setValue(null);
+					this.byId("input-superord.equip").setValue(null);
+				}
+				if (oEvent.getSource().getSelectedButton().getId().slice(-5) === "RB4-2") {
+					this.byId("btnAcc").setText(this.oBundle.getText('btnDismantle'));
+					this.byId("ser").setVisible(true);
+					this.byId("input-equip").setVisible(false);
+					this.byId("ser").setValue(null);
+					this.byId("input-funloc").setValue(null);
+					this.byId("input-superord.equip").setValue(null);
+				}
+			},
 
-                let modelPath = "../dismentle/webapp/model/demo.json";
-                let testModel = new JSONModel(modelPath);
-                this.getView().setModel(testModel,"oDmodel")
+			onSearch: function () {
+				var EquiNo = this.getView().byId("ser").getValue();
+				var funloc = this.getView().byId("input-funloc");
+				var superord = this.getView().byId("input-superord.equip");
+				var oModel = this.getView().getModel();
+				var sPath = "/EquipInstallSet" + "('" + EquiNo + "')";
+				oModel.read(sPath, {
+					success: function (oData, oResponse) {
+						funloc.setValue(oData.Funcloc);
+						superord.setValue(oData.Supequi);
+					}.bind(this)
+				});
+			},
 
-
-            // this.byId("ser").setVisible(false)
-            // this.byId("input-equip").setVisible(true)
-
-            //setting the resource model of i18n
-        //  var i18n= new ResourceModel({
-        //     bundleName : 'dismentle.webapp.i18n.i18n'
-        //  });
-        //  this.getView().setModel(i18n,"i18n");
-        //  var oBun = i18n.getResourceBundle()
-        
-         
-        },
-            //function for the clearing the fields
-            clearFields : function(){
-                this.byId("ser").setVisible(false)
-                this.byId("input-equip").setVisible(true)
-            },
-        
-            //these are function for the footer elements.
-            oAccept: function () {
-                alert("Accepted")
-            },
-            oReject: function () {
-                alert("Rejected")
-            },
-            oReset: function () {
-                alert("Fileds have been reset")
-            },
-            oSelectedChange: function (oEvent) {
-                alert("hello")
-            },
-            //fagments calling for toggel
-            // FragmentCall : function(oEvent){
-            //     if(oEvent.oSource.mProperties.selectedKey === "Dismantling"){
-            //         this.dismentleFragment();
-            //     }
-            //     if(oEvent.oSource.mProperties.selectedKey === "Installing"){
-            //         this.installFragment();
-            //     }
-            // },
-            //showing fragments
-            // installFragment: function () {
-            //     if (!this.iDialog) {
-
-            //         this.iDialog = this.loadFragment({
-    
-            //             name: "dismentle.view.install"
-    
-            //         });
-    
-            //     }
-    
-            //     this.iDialog.then(function(oDialog) {
-                  
-            //         oDialog.open();
-    
-            //     });
-            // },
-            // dismentleFragment: function () {
-            //     if (!this.disDialog) {
-
-            //         this.disDialog = this.loadFragment({
-    
-            //            name: "dismentle.view.dismentle"
-    
-            //         });
-    
-            //     }
-    
-            //     this.disDialog.then(function(oDialog) {
-                  
-            //         oDialog.open();
-    
-            //     });
-            // },
-            // onCloseDimentle : function () {
-
-            //     this.byId("dismentle").close();
-    
-            // },
-            // onCloseInstall : function () {
-
-            //     this.byId("install").close();
-    
-            // },
-            
-            oSelection:function(oEvent){
-                
-                 if(oEvent.getSource().getSelectedButton().getText() === "Install"){
-                  
-                    this.byId("ser").setVisible(false)
-                    this.byId("input-equip").setVisible(true)
-                    this.byId("input-equip").setValue(null);
-                    this.byId("input-funloc").setValue(null);
-                    this.byId("input-superord.equip").setValue(null);
-                }if(oEvent.getSource().getSelectedButton().getText() === "Dismantle"){
-                  
-                    this.byId("ser").setVisible(true)
-                    this.byId("input-equip").setVisible(false)
-                    this.byId("ser").setValue(null);
-                    this.byId("input-funloc").setValue(null);
-                    this.byId("input-superord.equip").setValue(null);
-                }
-            },
-            oAccept:function(oEve){
-               console.log("")
-            //    var x = this.byId('rbg4').getSelectedButton().getText()
-                if(this.byId('RB4-1').mProperties.selected)this.eve1()
-                if(this.byId('RB4-2').mProperties.selected) this.eve2()
-            },
-            eve1:function(x){
-              
-                var equip = this.byId("input-equip").getValue();
-                var fun = this.byId("input-funloc").getValue();
-                var sup = this.byId("input-superord.equip").getValue();
-                console.log(equip,fun,sup);
-                this.byId("input-equip").setValue(null);
-                this.byId("input-funloc").setValue(null);
-                this.byId("input-superord.equip").setValue(null);
-
-            },
-            eve2:function(x){
-                var equip = this.byId("ser").getValue();
-                console.log("eve2")
-                this.byId("ser").setValue(null);
-                this.byId("input-funloc").setValue(null);
-                this.byId("input-superord.equip").setValue(null);
-                
-            },
-            ODate: function(){
-                var Dat= new Date();
-                console.log(Dat)
-                this.byId
-
-            }
+			oAccept: function (oEve) {
+				if (this.byId('RB4-1').mProperties.selected) this.eve1()
+				if (this.byId('RB4-2').mProperties.selected) this.eve2()
+			},
+			eve1: function (y) {
+				var oModel = this.getView().getModel();
+				var equip = this.getView().byId("input-equip").getValue();
+				var fun = this.getView().byId("input-funloc").getValue();
+				var sup = this.getView().byId("input-superord.equip").getValue();
+				var oCreate = {};
+				oCreate.Equipment = equip;
+				oCreate.Funcloc = fun;
+				oCreate.Supequi = sup;
+				console.log(oCreate);
+				oModel.create("/EquipInstallSet", oCreate, {
+					method: "POST",
+					success : function (oData, oResponse) {
+						// console.log("success");
+						MessageToast.show(JSON.parse(oResponse.headers['sap-message']).message);
+					},
+					error: function (y) {
+						MessageToast.show(JSON.parse(y.responseText).error.message.value);
+					},
+				});
+				this.getView().byId("input-equip").setValue(null);
+				this.getView().byId("input-funloc").setValue(null);
+				this.getView().byId("input-superord.equip").setValue(null);
+			},
+			eve2: function (x) {
+				var equipDis = this.byId("ser").getValue();
+				var oModel = this.getView().getModel();
+				oModel.remove("/EquipDismantleSet('" + equipDis + "')", {
+					method: "DELETE",
+					success: function (oData, oResponse) {
+						MessageToast.show(JSON.parse(oResponse.headers['sap-message']).message);
+					},
+					error: function (x) {
+						MessageToast.show(JSON.parse(x.responseText).error.message.value);
+					},
+				})
+				this.byId("ser").setValue(null);
+				this.byId("input-funloc").setValue(null);
+				this.byId("input-superord.equip").setValue(null);
+			},
+			oReject: function () {
+				this.getView().byId('input-funloc').setValue(null);
+				this.byId("input-superord.equip").setValue(null);
+				this.byId("ser").setValue(null);
+				this.byId("input-equip").setValue(null);
+			}
 
             
         });
-    });
+    })

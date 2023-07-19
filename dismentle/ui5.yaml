@@ -17,7 +17,7 @@ server:
           url: https://ui5.sap.com
         backend:
           - path: /sap
-            url: http://localhost
+            url: https://FROXCVECCD01.group.int:4443/sap/opu/odata/sap/YPID01_SRV/EquipinstallSet(10003960)
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
