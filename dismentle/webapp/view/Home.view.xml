@@ -8,46 +8,66 @@
     xmlns:l="sap.ui.layout"
     xmlns:core="sap.ui.core"
 >
+<Shell >
+<App class = "myapp" >
    
 				<Page id="page" title="{i18n>title}">
-					<Panel headerText="{i18n>Operations}">
-						<OverflowToolbar height="auto">
+							<OverflowToolbar>
 							<ToolbarSpacer/>
-							<RadioButtonGroup id="rbg4" class="sapUiMediumMarginBottom" columns="2" select="oSelection">
-								<RadioButton id="RB4-1" text="{i18n>textRdB1}" selected="true"/>
-								<RadioButton id="RB4-2" text="{i18n>textRdb2}"/>
-								<!--<RadioButton id="RB4-3" text="{i18n>textRdb3}"/>-->
-							</RadioButtonGroup>
+							<HBox alignItems="Center" justifyContent="Center" >
+							<ToggleButton id="tb1" text="Install" type="Default" class="sapUiMediumMargin" press="oSelection" width="80%"></ToggleButton>
+							<ToggleButton id="tb2" text="Dismantle" type="Default" class="sapUiMediumMargin" press="oSelection" width="80%"></ToggleButton>
+							</HBox>
 							<ToolbarSpacer/>
 						</OverflowToolbar>
-					</Panel>
-					<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4"
+					<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" 
 						labelSpanS="12" adjustLabelSpan="true" visible="true">
-						<Label id="_IDGenLabel4" text="{i18n>labEquip}" labelFor="input-a" required="true"/>
-						<Input id="input-equip" value="{/EquipInstall/Equipment}" width="20rem"/>
+						
+						<Label id="_IDGenLabel4" text="{i18n>labEquip}" labelFor="input-a" required="true" />
+						<Input id="input-equip"   showSuggestion="true" valueHelpRequest="openFagment" placeholder="Enter Equipment No." showValueHelp="false" width="20rem" />
 						<Label id="_IDGenLabel5" text="{i18n>labEquip}" labelFor="input-a"/>
-						<SearchField width="20rem" visible="false" id="ser" search="onSearch"/>
-						<Label id="_IDGenLabel7" text="{i18n>labFunc}" labelFor="input-a"/>
-						<Input id="input-funloc" value="{/Equipment/Funcloc}" width="20rem"/>
+						<SearchField width="20rem" visible="false" id="ser" placeholder="Enter Equipment No." search="onSearch"/>
+						<!-- <Label id="_IDGenLabel7" text="{i18n>labFunc}" labelFor="input-a"/>
+						<Input id="input-funloc" value="{/Equipment/Funcloc}" placeholder="Enter Functional Loc." width="20rem"/>
 						<Label id="_IDGenLabel8" text="{i18n>labSup}" labelFor="input-a"/>
-						<Input id="input-superord.equip" width="20rem"/>
+						<Input id="input-superord.equip" placeholder="Enter Superorder Equip." width="20rem"/> -->
+						<Label id="_IDGenLabel7" text="Func.Loc/Superord.Equip" labelFor="input-a"/>
+						<Input id="input-funloc"  placeholder="Enter Func.Loc/Superord.Equip." width="20rem"/>
+						
+						<Label id="serialno" text="Serial No." labelFor="input-a"  required="false" />
+						<Input id="input-serial"   showSuggestion="true" placeholder=" Serial No." showValueHelp="false" width="20rem" />
+						<Label id="material" text="Material No." labelFor="input-a" required="false" />
+						<Input id="input-mat"   showSuggestion="true" placeholder="Material no."  showValueHelp="false" width="20rem" />
+						<Label id="Storageloc" text="Storage lo." labelFor="input-a" required="false" />
+						<Input id="input-loc"   showSuggestion="true" placeholder=" Storage Loc" showValueHelp="false" width="20rem" />
 					</f:SimpleForm>
 					<footer>
-						<OverflowToolbar id="otbFooter">
+						<Toolbar>
 							<ToolbarSpacer/>
-							<Button id="btnAcc" type="Accept" text="{i18n>btnInstall}" press=".oAccept">
+							<Button id="messagePopoverBtn"
+									icon="sap-icon://message-popup"
+									type="{ path: '/', formatter: '.buttonTypeFormatter' }"
+							text= "{path: '/', formatter: '.highestSeverityMessages' }"
+									press=".handleMessagePopoverPress"
+									ariaHasPopup="Dialog"/>
+							<Button id="btnAcc"  type="Accept" text="{i18n>btnInstall}" width="10%" press=".oAccept">
+								<layoutData>
+									<!-- <OverflowToolbarLayoutData priority="NeverOverflow"/> -->
+									<FlexItemData growFactor="2" />
+								</layoutData>
+							</Button>
+							<Button id="btnCan" class = "intBtnF" type="Reject" text="{i18n>btnRejc}" width="10%" press="oReject">
 								<layoutData>
 									<OverflowToolbarLayoutData priority="NeverOverflow"/>
 								</layoutData>
 							</Button>
-							<Button id="btnCan" type="Reject" text="{i18n>btnRejc}" press="oReject">
-								<layoutData>
-									<OverflowToolbarLayoutData priority="NeverOverflow"/>
-								</layoutData>
-							</Button>
+								
 							<ToolbarSpacer/>
-						</OverflowToolbar>
+						</Toolbar>
 					</footer>
+					
 				</Page>
+				</App>
+				</Shell>
 			
 </mvc:View>

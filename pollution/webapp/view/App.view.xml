@@ -1,7 +1,22 @@
-<mvc:View controllerName="pollution.controller.App"
-    xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <App id="app">
-    </App>
+<mvc:View xmlns="sap.m"
+ xmlns:mvc="sap.ui.core.mvc"
+ displayBlock="true" 
+ xmlns:f="sap.f" 
+ controllerName="pollution.controller.App"
+ height="100%">
+	<f:DynamicPage toggleHeaderOnTitleClick="false">
+		<!-- DynamicPage Title -->
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<Title text="About supplier"/>
+				</f:heading>
+
+				<!-- DynamicPage Actions -->
+				<f:navigationActions>
+					<OverflowToolbarButton type="Transparent" icon="sap-icon://decline" press="handleClose"  tooltip="Close about page" />
+				</f:navigationActions>
+			</f:DynamicPageTitle>
+		</f:title>
+	</f:DynamicPage>
 </mvc:View>

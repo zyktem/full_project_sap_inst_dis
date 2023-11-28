@@ -1,0 +1,20 @@
+<mvc:View controllerName="installation.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        	<footer>
+			<OverflowToolbar id="otbFooter">
+				<ToolbarSpacer id = "tbr"/>
+				<Button type="Emphasized" text="Save" press=" disFragment" icon="sap-icon://accept" > 
+					<layoutData><OverflowToolbarLayoutData priority="NeverOverflow" /></layoutData>
+				</Button>
+				<Button type="Reject" text="Cancel" press=".oReject" icon="sap-icon://decline">
+					<layoutData><OverflowToolbarLayoutData priority="NeverOverflow" /></layoutData>
+				</Button>
+                <Button type="Default" text="Reset" press=".oReset" icon="sap-icon://reset">
+					<layoutData><OverflowToolbarLayoutData priority="NeverOverflow" /></layoutData>
+				</Button>
+                <ToolbarSpacer/>
+                </footer>
+    </Page>
+</mvc:View>

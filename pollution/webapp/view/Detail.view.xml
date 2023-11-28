@@ -1,0 +1,13 @@
+
+<mvc:View xmlns:m="sap.m" xmlns="sap.f" 
+xmlns:mvc="sap.ui.core.mvc"
+ displayBlock="true"
+ controllerName="pollution.controller.Detail"
+   height="100%">
+<m:Page>
+    <m:content>
+        <m:Button id = "txt" text = "test"></m:Button>
+    </m:content>
+
+</m:Page>
+</mvc:View>

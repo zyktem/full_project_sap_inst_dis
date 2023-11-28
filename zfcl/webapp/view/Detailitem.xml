@@ -1,0 +1,7 @@
+<mvc:View controllerName="zfcl.controller.Detail"
+     xmlns:f="sap.f"
+     xmlns:mvc="sap.ui.core.mvc"
+     xmlns="sap.m"  
+     displayBlock="true"
+    >
+ </mvc:View>

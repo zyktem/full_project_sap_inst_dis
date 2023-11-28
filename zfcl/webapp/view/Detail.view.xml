@@ -1,0 +1,46 @@
+<mvc:View controllerName="zfcl.controller.Detail"
+  		xmlns="sap.uxap"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:m="sap.m"
+		xmlns:f="sap.f"
+		xmlns:form="sap.ui.layout.form"
+     displayBlock="true"
+    >
+		<m:Page >
+		<m:content>
+			<ObjectPageLayout>
+			<sections>
+		<ObjectPageSection title="General Information">
+				 <ObjectPageSubSection>
+						<!-- <blocks> --> 
+							<form:SimpleForm
+								maxContainerCols="2"
+								
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								
+								<m:VBox >
+								    <m:Label text="Product ID"/>
+									<m:Text text="{}"/>
+								</m:VBox>
+							
+								    <!-- <m:Text text="productsProductId"/> -->
+									<m:Label text="Description"/>
+									<!-- <m:Text text="productsDescription"/> -->
+									<m:Label text="Supplier"/>
+									<!-- <m:Text text="productsSupplierName"/> -->
+							</form:SimpleForm>
+					 <!-- </blocks>  -->
+					 </ObjectPageSubSection> 
+			 </ObjectPageSection>	
+			 </sections>
+			 </ObjectPageLayout>
+			</m:content>
+			</m:Page>
+</mvc:View>

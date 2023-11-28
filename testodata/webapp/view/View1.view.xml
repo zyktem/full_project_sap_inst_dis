@@ -1,0 +1,25 @@
+<mvc:View xmlns:table="sap.ui.table" controllerName="testodata.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Table id  ="tav"
+        items = "{/Products}"
+        >
+        <columns>
+        <Column id ="cl1" >
+        <Text id = "text" text = "test"/>
+        </Column>
+        </columns>
+      <items>
+      <ColumnListItem id = "clmIst">
+				<cells>
+					<Text id = "text1" text = "{ProductName}"></Text>
+                    </cells>
+
+                      </ColumnListItem >
+      </items>
+        
+        
+        </Table>
+    </Page>
+</mvc:View>

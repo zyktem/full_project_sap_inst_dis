@@ -1,0 +1,106 @@
+<mvc:View controllerName="ztesttable.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+	xmlns:f="sap.f">
+	
+    <Page id="page" title="{i18n>title}">
+     	<ScrollContainer class="sapFDynamicPageAlignContent" height="100%" width="100%" vertical="true" focusable="false">
+		
+     <Table id="idProductsTable"
+	 	growing="true"
+		inset="true"
+		items="{/Orders}"
+		
+       
+		>
+		 <headerToolbar>
+               <Toolbar>
+                  <Label id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+                  <ToolbarSpacer />
+                  <SearchField id="searchField" width="auto" search=".onFilterPosts" />
+               </Toolbar>
+            </headerToolbar>
+
+		<infoToolbar>
+			<OverflowToolbar>
+				<Label text="Table of Oders"/>
+				<ToolbarSpacer ></ToolbarSpacer>
+               	<ToggleButton id = "tgBtn" icon="sap-icon://resize-horizontal"  enabled="true" press="oVisible" >
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</ToggleButton>
+			
+			</OverflowToolbar>
+		</infoToolbar>
+		<columns>
+			<Column
+            id ="cl1"
+            visible="true"
+				>
+				<Text text="Order ID" />
+			</Column>
+			<Column
+            id ="cl2"
+            visible="true"
+				>
+				<Text text="Customer ID" />
+			</Column>
+            
+			<Column
+            id ="cl3"
+            visible="true"
+				>
+				<Text text="Employee ID" />
+			</Column>
+            	<Column
+                id ="cl4"
+            visible="true"
+            hAlign="End"
+				>
+				<Text text="Shipping Via" />
+			</Column>
+            	<Column
+                id ="cl5"
+            visible="true"
+			hAlign="Center"
+				>
+				<Text text="Shipping Name" />
+			</Column>
+            	<Column
+                id ="cl6"
+            visible="true"
+             hAlign="End"
+				>
+				<Text text="Shipping City" />
+			</Column>
+		
+
+		</columns>
+		<items>
+			<ColumnListItem navigated="true" >
+				<cells >
+					<Text text = "{OrderID}"></Text>
+					<Text text = "{CustomerID}"></Text>
+					<Text text = "{EmployeeID}"></Text>
+					<Text text = "{ShipVia}"></Text>
+					<Text text = "{ShipName}"></Text>
+					<Text text = "{ShipCity}"></Text>
+					
+					
+					
+					
+				
+
+					 
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+	
+    
+</ScrollContainer>
+
+    </Page>
+
+</mvc:View>

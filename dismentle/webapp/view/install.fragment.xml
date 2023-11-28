@@ -1,23 +1,35 @@
-<core:FragmentDefinition
- controllerName="dismentle.controller.Home"
-   xmlns:core="sap.ui.core"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
+<core:FragmentDefinition xmlns:f="sap.ui.layout.form"
+controllerName="dismentle.controller.Home"
     xmlns="sap.m"
-    xmlns:l="sap.ui.layout"
->
-<Dialog id = "install">  
-    <VBox >
-    <Panel headerText="Installation"/>
-    
-    <Button text = "save" ></Button>
-    <Button text = "close" press="onCloseInstall" ></Button>
-    
-</VBox>
-      
-     
-</Dialog>
+    xmlns:ndc="sap.ndc"
+    xmlns:qr="sap.ui.webc.fiori"
+    xmlns:core="sap.ui.core">
+    <Dialog id="openDialogInst">
+        <IconTabHeader mode="Inline">
+            <items>
+                <IconTabFilter key="info" text="Search Orders" icon="sap-icon://filter"/>
+                
+            </items>
 
+        </IconTabHeader>
+       
+        <HBox >
+            <VBox >
+                <f:SimpleForm >
+                    <Label text="hello " class="sapUiTinyMarginBeginEnd" />
+                    <HBox>
+                        <Input id="text12" valueHelpRequest="equiFarg" placeholder="search" width="95%" showSuggestion="true" showValueHelp="true" />
+                        <ToolbarSpacer />
+                        <ndc:BarcodeScannerButton id="sampleBarcodeScannerButton12" scanSuccess="onScanSuccess" scanFail="onScanError" inputLiveUpdate="onScanLiveupdate" dialogTitle="Cool! Please enter the Barcode" />
+                    </HBox>
+                
+                </f:SimpleForm>
+            </VBox>
+        </HBox>
+        <FlexBox alignItems="Start" justifyContent="End">
 
-
+            <Button text="Cancel" press="closeDialogDis" />
+        </FlexBox>
+    </Dialog>
 </core:FragmentDefinition>
+

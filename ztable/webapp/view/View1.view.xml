@@ -1,0 +1,56 @@
+<mvc:View controllerName="ztable.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	xmlns:unified="sap.ui.unified"
+    xmlns="sap.m"
+    >
+    <Page id="page" title="{i18n>title}">
+       
+ <Table id="idProductsTable"
+		inset="false"
+		items="{dataModel>/}"
+		>
+
+		<infoToolbar>
+			<OverflowToolbar>
+				<Label text="Responsive Table"/>
+			</OverflowToolbar>
+		</infoToolbar>
+		<columns>
+			<Column
+				>
+				<Text text="CategoryID" />
+			</Column>
+			<Column
+				>
+				<Text text="CategoryName" />
+			</Column>
+			<Column
+				>
+				<Text text="Description" />
+			</Column>
+		
+
+		</columns>
+		<items>
+			<ColumnListItem >
+				<cells>
+					<Text text = "{dataModel>CategoryID}"></Text>
+					<Text text = "{dataModel>CategoryName}"></Text>
+					
+					<Text text = "{dataModel>Description}"></Text>
+					
+					
+				
+
+					 
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+
+
+
+    </Page>
+</mvc:View>
+

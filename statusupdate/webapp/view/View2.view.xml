@@ -1,0 +1,34 @@
+<mvc:View xmlns:vk="sap.ui.vk" xmlns:tnt="sap.tnt" controllerName="statusupdate.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+     xmlns:f="sap.ui.layout.form"
+    >
+    <Page id="page" title="{i18n>title}">
+         <tnt:ToolHeader id  = "toolheader" >
+         <Text id = "header" text = "Status change" wrapping="true"></Text>
+         </tnt:ToolHeader>
+         <Panel id = "pnl">
+         	<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" 
+						labelSpanS="12" adjustLabelSpan="true" visible="true">
+							<FlexBox id  ="flxbx" direction="Column" alignItems="Start">
+						<!-- <Label id="_IDGenLabel4" text="Equipment No." labelFor="input-a" required="true" />
+						<Input id="input-equip"   showSuggestion="true" valueHelpRequest="openFagment" showValueHelp="false" width="20rem" /> -->
+
+						<!-- <Label id="_IDGenLabel5" text="{i18n>labEquip}" labelFor="input-a"/>
+						<SearchField width="20rem" visible="false" id="ser"  search="onSearch"/>
+						<Label id="_IDGenLabel7" text="{i18n>labFunc}" labelFor="input-a"/>
+						<Input id="input-funloc" value="{/Equipment/Funcloc}" width="20rem"/>
+						<Label id="_IDGenLabel8" text="{i18n>labSup}" labelFor="input-a"/>
+						<Input id="input-superord.equip" width="20rem"/> -->
+                       
+                        <Button id = "btn" text ="submit"></Button>
+                        	</FlexBox>
+					</f:SimpleForm>
+                    </Panel>
+
+
+
+
+     
+    </Page>
+</mvc:View>

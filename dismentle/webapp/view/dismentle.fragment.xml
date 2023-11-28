@@ -1,22 +1,53 @@
-<core:FragmentDefinition
- controllerName="dismentle.controller.Home"
-   xmlns:core="sap.ui.core"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
+
+
+
+
+<core:FragmentDefinition xmlns:f="sap.ui.layout.form"
+controllerName="dismentle.controller.Home"
     xmlns="sap.m"
-    xmlns:l="sap.ui.layout"
->
-<Dialog id = "dismentle">  
-    <VBox >
-    <Panel headerText="Dismental"/>
-    <Button text = "save" ></Button>
-    <Button text = "close" press="onCloseDimentle" ></Button>
-    
-</VBox>
-     
-     
-</Dialog>
+    xmlns:ndc="sap.ndc"
+    xmlns:qr="sap.ui.webc.fiori"
+    xmlns:core="sap.ui.core">
+    <Dialog id="openDialogdis">
+        <IconTabHeader mode="Inline">
+            <items>
+                <IconTabFilter key="info" text="Search Orders" icon="sap-icon://filter"/>
+                
+            </items>
 
+        </IconTabHeader>
+       
+        <HBox >
+            <VBox >
+                <f:SimpleForm >
+                    <Label text="Equipment " class="sapUiTinyMarginBeginEnd" />
+                    <HBox>
+                        <Input id="text" valueHelpRequest="equiFagment" placeholder="{i18n>Search}" width="95%" showSuggestion="true" showValueHelp="true" />
+                        <ToolbarSpacer />
+                        <ndc:BarcodeScannerButton id="sampleBarcodeScannerButton1" scanSuccess="onScanSuccess" scanFail="onScanError" inputLiveUpdate="onScanLiveupdate" dialogTitle="Cool! Please enter the Barcode" />
+                    </HBox>
+                    <Label text="Order Type " class="sapUiTinyMarginBeginEnd" />
+                    <Input id="char" valueHelpRequest="handleValueHelp1" showSuggestion="true" showValueHelp="true"/>
+                    <Label text="Functional Location " class="sapUiTinyMarginBeginEnd" />
+                    <HBox >
+                        <Input id="text1" valueHelpRequest="handleValueHelp2" placeholder="{i18n>Search}" width="95%" showSuggestion="true" showValueHelp="true"/>
+                        <ToolbarSpacer />
+                        <ndc:BarcodeScannerButton id="sampleBarcodeScannerButton2" scanSuccess="onScanSuccess" scanFail="onScanError" inputLiveUpdate="onScanLiveupdate" dialogTitle="Cool! Please enter the Barcode" />
+                    </HBox>
+                    <Label text="Work Centre " class="sapUiTinyMarginBeginEnd" />
+                    <Input id="text2" />
 
+                    <Label text="Engineer" class="sapUiTinyMarginBeginEnd" />
+                    <Input id="text3" />
+                    <Label text="" />
 
+                    <Button text="{i18n>Search}" icon="sap-icon://search" width="auto" press="oPressOrderSearch" />
+                </f:SimpleForm>
+            </VBox>
+        </HBox>
+        <FlexBox alignItems="Start" justifyContent="End">
+
+            <Button text="Cancel" press=".closeDialog" />
+        </FlexBox>
+    </Dialog>
 </core:FragmentDefinition>

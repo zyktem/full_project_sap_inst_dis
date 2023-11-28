@@ -1,54 +1,68 @@
-<mvc:View
-    xmlns:f="sap.f"
-    controllerName="pollution.controller.Firstview"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
-    xmlns="sap.m"
-    height="100%"
->
-    <Page
-        id="page"
-        title="{i18n>title}"
-    >
-        <SplitContainer id="splt">
-            <detailPages>
-                 <List
-                        id="ShortProductList5"
-                        headerText="Products"
-                        items="{oView>/}"
-                        itemPress=".oPress"
-                    >
-                        <items>
-                            <StandardListItem
-                                id="sdt7"
-                                type="Navigation"
-                                title="{oView>country}"
-                                
-                            />
-                        </items>
-                    </List>
 
-            </detailPages>
+<mvc:View  
+		xmlns="sap.uxap"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:m="sap.m"
+		xmlns:f="sap.f"
+		xmlns:form="sap.ui.layout.form"
+ controllerName="pollution.controller.Firstview"
+   height="100%">
+	
+	<ObjectPageLayout id="ObjectPageLayout"
+					 showTitleInHeaderContent="true"
+					alwaysShowContentHeader="false"
+					preserveHeaderStateOnScroll="false"
+					headerContentPinnable="true"
+					isChildPage="true"
+					upperCaseAnchorBar="false">
+				<headerTitle>
+					<ObjectPageDynamicHeaderTitle>
+						<expandedHeading>
+							<m:Title text="Air Quality Index" wrapping="true" class="sapUiSmallMarginEnd"/>
+						</expandedHeading>
 
-            <masterPages>
-                <Page id="master">
-                    <List
-                        id="ShortProductList"
-                        headerText="Products"
-                        items="{oView>/}"
-                        itemPress=".oPress"
-                    >
-                        <items>
-                            <StandardListItem
-                                id="sdt"
-                                type="Navigation"
-                                title="{oView>country}"
-                                
-                            />
-                        </items>
-                    </List>
-                </Page>
-            </masterPages>
-        </SplitContainer>
-    </Page>
+						
+
+						<navigationActions>
+							<m:OverflowToolbarButton type="Transparent" icon="sap-icon://full-screen" press="handleFullScreen" id="enterFullScreenBtn" tooltip="Enter Full Screen Mode" visible="{= ${/actionButtonsInfo/midColumn/fullScreen} !== null }"/>
+							<m:OverflowToolbarButton type="Transparent" icon="sap-icon://exit-full-screen" press="handleExitFullScreen" id="exitFullScreenBtn" tooltip="Exit Full Screen Mode" visible="{= ${/actionButtonsInfo/midColumn/exitFullScreen} !== null }"/>
+							<m:OverflowToolbarButton type="Transparent" icon="sap-icon://decline" press="handleClose"  tooltip="Close middle column" visible="{= ${/actionButtonsInfo/midColumn/closeColumn} !== null }"/>
+						</navigationActions>
+
+					
+
+					</ObjectPageDynamicHeaderTitle>
+				</headerTitle>
+
+				
+
+		
+		
+
+			<ObjectPageSection title="Suppliers">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<m:Table
+								id="suppliersTable"
+								mode="SingleSelectMaster"
+								itemPress="handleItemPress"
+								items="{countries>/}">
+								<m:columns>
+									<m:Column />
+								</m:columns>
+								<m:items>
+									<m:ColumnListItem type="Navigation">
+										<m:cells>
+											<m:ObjectIdentifier text="{countries>country}" />
+										</m:cells>
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+	
+	</ObjectPageLayout>
 </mvc:View>

@@ -9,117 +9,42 @@
         id="page"
         title="Installtion"
     >
-        
-<!-- 
-        <Panel headerText="Installation">
-				<FlexBox direction="Column" alignItems="Start">
-				<Label text="operation" labelFor="input-a" required="true" />
-                	<ComboBox id = "combForLble"/>
-			    </FlexBox>
-           
-		</Panel>
-       
-        <Panel headerText="Installation">
-         <FlexBox direction="Column" alignItems="Start">
-        <Label text="Meterial:" labelFor="input-a" required="true" />
-        <Input id = "input-met" width="12.5rem" ></Input>
-        <Label text="Serial Number:" labelFor="input-a" required="true" />
-        <Input id = "input-seri" width="12.5rem" ></Input>
-        <Label text="Equipment:" labelFor="input-a" required="true" />
-        <Input id = "input-equip" width="12.5rem" ></Input>
-        <Label text="Plant:" labelFor="input-a" required="true" />
-        <Input id = "input-plnt" width="12.5rem" ></Input>
-        <Label text="Stor. Loction:" labelFor="input-a" required="true" />
-        <Input id = "input-stor" width="12.5rem" ></Input>
-        </FlexBox>
-        </Panel> -->
+       <PlanningCalendar id="schedulePlanningCalendar"
+        rows="{path: 'managedEmployees>/employees'}"
+         specialDates="{path: 'specialDates>/holidays'}"
+          appointmentsVisualization="Filled"
+           singleSelection="{manager>/isNotManager}"
+            viewKey="Week"
+             appointmentSelect="onSelectAppointment"
+              intervalSelect="onIntervalSelect"
+               startDateChange="onStartDateChanged"
+                viewChange="onStartDateChanged"
+                 rowSelectionChange="onEmployeeSelected"
+                  showIntervalHeaders="true"
+                   showEmptyIntervalHeaders="false"
+                    stickyHeader="true"> 
 
 
-<!-- <f:SimpleForm id="SimpleForm1"
 
-                editable="false"
 
-                layout="ResponsiveGridLayout"
+    <PlanningCalendarRow key="{managedEmployees>userId}"
+     icon="{managedEmployees>image}"
+      title="{managedEmployees>firstName} {managedEmployees>lastName}"
+       text="{managedEmployees>title}"
+        appointments="{path : 'managedEmployees>appointments', templateShareable: 'true'}"
+         intervalHeaders="{path : 'managedEmployees>holidays', templateShareable: 'true'}"
+          enableAppointmentsDragAndDrop="true">
+                                <appointments>
+                                    <unified:CalendarAppointment key="{managedEmployees>key}" startDate="{path:'managedEmployees>start', formatter:'.parseDateTime'}" endDate="{path:'managedEmployees>end', formatter:'.parseDateTime'}" type="{managedEmployees>type}" tentative="{managedEmployees>tentative}" title="{managedEmployees>title}" text="{managedEmployees>text}" tooltip="{managedEmployees>tooltip}" icon="{managedEmployees>icon}" />
+                                </appointments>
 
-                title="Address"
 
-                labelSpanXL="3"
 
-                labelSpanL="3"
 
-                labelSpanM="3"
-
-                labelSpanS="12"
-
-                adjustLabelSpan="false"
-
-                emptySpanXL="4"
-
-                emptySpanL="4"
-
-                emptySpanM="4"
-
-                emptySpanS="0"
-
-                columnsXL="1"
-
-                columnsL="1"
-
-                columnsM="1"
-
-                singleContainerFullSize="false">
-
-                <f:content>
-
-                    <Label text="Name" />
-
-                    <Input id="nameText" placeholder="SupplierName" />
-
-                    <Label text="Street/No." />
-
-                    <Input placeholder="Street HouseNumber" />
-
-                    <Label text="ZIP Code/City" />
-
-                    <Input placeholder="ZIPCode City" />
-
-                    <Label text="Country" />
-
-                    <Input id="countryText1" placeholder="Country1">
-
-                        <layoutData>
-
-                            <l:GridData span="XL1 L1 M3 S4" />
-
-                        </layoutData>
-
-                    </Input>
-
-                    <Input id="countryText2" placeholder="Country2">
-
-                        <layoutData>
-
-                            <l:GridData span="XL1 L2 M2 S4" />
-
-                        </layoutData>
-
-                    </Input>
-
-                    <Input id="countryText3" placeholder="Country3">
-
-                        <layoutData>
-
-                            <l:GridData span="XL1 L2 M2 S4" />
-
-                        </layoutData>
-
-                    </Input>
-
-                </f:content>
-
-            </f:SimpleForm> -->
-            <Button id = "iywes" text = "dev"></Button>
 
 
     </Page>
 </mvc:View>
+
+
+

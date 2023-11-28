@@ -1,1 +1,21 @@
 /* Enter your custom styles here */
+.btnClass{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 32px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+};
+
+.sapUiSizeCompact .sapMBtn{
+    height: 4rem;
+    padding: 1.1875rem 0;
+    padding-top: 1.1875rem;
+    padding-right: 2px;
+    padding-bottom: 1.1875rem;
+    padding-left: 2px;
+
+}
