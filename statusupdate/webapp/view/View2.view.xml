@@ -1,4 +1,4 @@
-<mvc:View xmlns:vk="sap.ui.vk" xmlns:tnt="sap.tnt" controllerName="statusupdate.controller.View1"
+<mvc:View xmlns:vk="sap.ui.vk" xmlns:tnt="sap.tnt" controllerName="statusupdate.controller.View2"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m"
      xmlns:f="sap.ui.layout.form"

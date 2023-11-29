@@ -9,7 +9,11 @@ sap.ui.define([
 
         return Controller.extend("statusupdate.controller.View1", {
             onInit: function () {
+                alert("hello")
+            },
+            // oAccept: function(){
+            //     this.getOwnerComponent().getRouter().navTo("TargetView2")
 
-            }
+            // }
         });
     });

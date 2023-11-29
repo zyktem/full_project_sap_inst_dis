@@ -8,7 +8,7 @@
     displayBlock="true"
     xmlns="sap.m"
 >
-    <Shell id="shell">
+ <Shell id="shell">
         <App id="app">
             <Page
                 id="page"
@@ -20,7 +20,7 @@
                         alignItems="Center"
                         class="myFlexContainer"
                     >
-                        <Title text="Without Serial no." />
+                        <Title text="With Serial no." />
                     </FlexBox>
                 </Panel>
 
@@ -30,19 +30,17 @@
                     alignItems="Start"
                     justifyContent="Center"
                 >
-                    <ToggleButton
+                    <Button
                         id="instBtn"
                         text="Install"
                         type="Emphasized"
-                        class="mtbtn"
-                        press ="oSelection"
+                        class="mtbtn sapUiSizeCompactAc sapMBtnInnerAc sapMBtnInnerAc"
                     />
-                    <ToggleButton
+                    <Button
                         id="distBtn"
                         text="Dismantle"
                         type="Reject"
                         class="mtbtn"
-                        press="oSelectionD"
                     />
                 </FlexBox>
 
@@ -59,7 +57,7 @@
                         visible="true"
                     >
                         <Label
-                            id="_IDGenLabel4"
+                            id="euiLab"
                             text="Equipment"
                             labelFor="input-a"
                             required="true"
@@ -71,7 +69,7 @@
                             width="15rem"
                         />
                         <Label
-                            id="_IDGenLabel5"
+                            id="funloLab"
                             text="Func.Loc/Superord.Equip"
                             required="true"
                             labelFor="input-a"
@@ -83,16 +81,42 @@
                             search="onSearch"
                         />
                         <Label
-                            id="_IDGenLabel7"
-                            text="Func.Loc/Superord.Equip"
+                            id="mapLab"
+                            text="Material No."
                             labelFor="input-a"
                         />
                         <Input
-                            id="inFunloc"
+                            id="inMat"
                             visible="true"
                             valueHelpRequest="FuncSupValHelpReq"
                             showValueHelp="true"
-                            value="{/Equipment/Funcloc}"
+                           
+                            width="15rem"
+                        />
+                        <Label
+                            id="sirLab"
+                            text="Serial No."
+                            labelFor="input-a"
+                        />
+                        <Input
+                            id="inSir"
+                            visible="true"
+                            valueHelpRequest="FuncSupValHelpReq"
+                            showValueHelp="true"
+                          
+                            width="15rem"
+                        />
+                        <Label
+                            id="strgLab"
+                            text="Storage Loc"
+                            labelFor="input-a"
+                        />
+                        <Input
+                            id="inStrg"
+                            visible="true"
+                            valueHelpRequest="FuncSupValHelpReq"
+                            showValueHelp="true"
+                           
                             width="15rem"
                         />
                         <!--<Label id="_IDGenLabel8" text="{i18n>labSup}" labelFor="input-a"/>-->
@@ -135,4 +159,5 @@
             </Page>
         </App>
     </Shell>
+
 </mvc:View>

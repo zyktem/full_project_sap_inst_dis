@@ -41,6 +41,12 @@
                 text="Submit"
                 press="onPress"
             />
+			<Button
+                id="forSerialize"
+                text="For serialize equip"
+                press="onSerial"
+            />
+
         </FlexBox>
     </Page>
 </mvc:View>

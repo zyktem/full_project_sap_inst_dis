@@ -11,9 +11,19 @@ sap.ui.define([
             onInit: function () {
 
             },
+            
             onPress:function(){
                 this.getOwnerComponent().getRouter().navTo("RouteView2");
+            },
+            onSerial:function(){
+                this.getOwnerComponent().getRouter().navTo("RouteView3");  
+            },
+            //concel button
+            oReject:function(){
+                this.getView().byId("inEqui").setValue(null);
+                this.getView().byId("inFunloc").setValue(null)
             }
+            
 
         });
     });

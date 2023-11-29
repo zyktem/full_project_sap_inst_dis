@@ -1,68 +1,158 @@
-<mvc:View xmlns:vk="sap.ui.vk" xmlns:tnt="sap.tnt" controllerName="statusupdate.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+<mvc:View
+    xmlns:vk="sap.ui.vk"
+    xmlns:tnt="sap.tnt"
+    controllerName="statusupdate.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
     xmlns="sap.m"
-     xmlns:f="sap.ui.layout.form"
-
+    xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
     >
-    <Page id="page" title="{i18n>title}">
-         <tnt:ToolHeader id  = "toolheader" >
-         <Text id = "header" text = "Install and Dismantle" wrapping="true"></Text>
-         </tnt:ToolHeader>
-
-		 <!-- privious code which was not finalise -->
-         <Panel id = "pnl">
-         	<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" 
-						labelSpanS="12" adjustLabelSpan="true" visible="true">
-							
-						<!-- <Label id="_IDGenLabel4" text="Equipment No." labelFor="input-a" required="true" />
+       
+            <!-- toolbar with toggle button -->
+      	<OverflowToolbar id = "ofltbl">
+							<ToolbarSpacer id ="tblsL"/>
+							<HBox id ="hbxTbtn" alignItems="Center" justifyContent="Center" >
+							<ToggleButton id="tb1" text="Install" type="Default" class="sapUiMediumMargin" press="oSelection" width="80%"></ToggleButton>
+							<ToggleButton id="tb2" text="Dismantle" type="Default" class="sapUiMediumMargin" press="oSelection" width="80%"></ToggleButton>
+							</HBox>
+							<ToolbarSpacer id ="tblsR"/>
+						</OverflowToolbar>
+			
+       
+        <!-- privious code which was not finalise -->
+        <Panel id="pnl">
+            <f:SimpleForm
+                id="SimpleFormToolbar"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="4"
+                labelSpanL="3"
+                labelSpanM="4"
+                labelSpanS="12"
+                adjustLabelSpan="true"
+                visible="true"
+            >
+                <!-- <Label id="_IDGenLabel4" text="Equipment No." labelFor="input-a" required="true" />
 						<Input id="input-equip"   showSuggestion="true" valueHelpRequest="openFagment" showValueHelp="false" width="20rem" /> -->
-                        <Label id="_IDGenLabel4" text="Equipment Number." labelFor="input-a" required="true" />
-                      
-						<Input id="input-equip"   showSuggestion="true" valueHelpRequest="openFagment" placeholder="Equipment Number."  showValueHelp="false" width="20rem" />
-                       <Label id ="idl" text="Serial Number."></Label>
-                      
-						<Input id="input-equipser"   showSuggestion="true" valueHelpRequest="openFagment" placeholder="Serial Number will display" showValueHelp="false" width="20rem" />
-                         <Label id="_IDGenLabel5" text="Material No."  />
-                         <Input id="input-materialno" showSuggestion="true" valueHelpRequest="openFagment" placeholder="Material Number will display" showValueHelp="false" width="20rem" />
-                          <Label id ="idexstng" text="Existing Storage Location."></Label>
-                          <Input id="input-exstng" showSuggestion="true" valueHelpRequest="openFagment" placeholder="Existing Storage Location." showValueHelp="false" width="20rem" />
-                                                    <Label id ="idechngstro" text="Change Storage Location."></Label>
-                          <Input id="input-idechngstro" showSuggestion="true" valueHelpRequest="openFagment" placeholder="Enter Storage Location." showValueHelp="false" width="20rem" />
+                <Label
+                    id="_IDGenLabel4"
+                    text="Equipment Number."
+                    labelFor="input-a"
+                    required="true"
+                />
 
-						<!-- <Label id="_IDGenLabel5" text="{i18n>labEquip}" labelFor="input-a"/>
+                <Input
+                    id="input-equip"
+                    showSuggestion="true"
+                    valueHelpRequest="openFagment"
+                    placeholder="Equipment Number."
+                    showValueHelp="false"
+                    width="20rem"
+                />
+				<!-- Not required here -->
+                <!-- <Label
+                    id="idl"
+                    text="Serial Number."
+                />
+
+                <Input
+                    id="input-equipser"
+                    showSuggestion="true"
+                    valueHelpRequest="openFagment"
+                    placeholder="Serial Number will display"
+                    showValueHelp="false"
+                    width="20rem"
+                />
+                <Label
+                    id="_IDGenLabel5"
+                    text="Material No."
+                />
+                <Input
+                    id="input-materialno"
+                    showSuggestion="true"
+                    valueHelpRequest="openFagment"
+                    placeholder="Material Number will display"
+                    showValueHelp="false"
+                    width="20rem"
+                />
+                <Label
+                    id="idexstng"
+                    text="Existing Storage Location."
+                />
+                <Input
+                    id="input-exstng"
+                    showSuggestion="true"
+                    valueHelpRequest="openFagment"
+                    placeholder="Existing Storage Location."
+                    showValueHelp="false"
+                    width="20rem"
+                />
+                <Label
+                    id="idechngstro"
+                    text="Change Storage Location."
+                />
+                <Input
+                    id="input-idechngstro"
+                    showSuggestion="true"
+                    valueHelpRequest="openFagment"
+                    placeholder="Enter Storage Location."
+                    showValueHelp="false"
+                    width="20rem"
+                /> -->
+
+                <!-- <Label id="_IDGenLabel5" text="{i18n>labEquip}" labelFor="input-a"/>
 						<SearchField width="20rem" visible="false" id="ser"  search="onSearch"/>
 						<Label id="_IDGenLabel7" text="{i18n>labFunc}" labelFor="input-a"/>
 						<Input id="input-funloc" value="{/Equipment/Funcloc}" width="20rem"/>
 						<Label id="_IDGenLabel8" text="{i18n>labSup}" labelFor="input-a"/>
 						<Input id="input-superord.equip" width="20rem"/> -->
-                       
-                      
-                        
-                          
-					</f:SimpleForm>
-                    </Panel>
+            </f:SimpleForm>
+        </Panel>
+
+        <footer>
+            <OverflowToolbar id="otbFooter">
+                <ToolbarSpacer id="tbls" />
+
+                <Button
+                    id="btnAcc"
+                    type="Accept"
+                    text="Submit"
+                    width="10%"
+                    press=".oAccept"
+                >
+                    <!-- <layoutData> -->
+                        <!-- <OverflowToolbarLayoutData priority="NeverOverflow"/> -->
+                        <!-- <FlexItemData
+                            id="fxid"
+                            growFactor="2"
+                        />
+                    </layoutData> -->
 
 
+                </Button>
+                <!-- <Button
+                    id="btnCan"
+                    class="intBtnF"
+                    type="Reject"
+                    text="Cancel"
+                    width="10%"
+                    press="oReject"
+                >
+                    <layoutData>
+                        <OverflowToolbarLayoutData
+                            id="ofld"
+                            priority="NeverOverflow"
+                        />
+                    </layoutData>
+                </Button> -->
 
-   					<footer>
-						<OverflowToolbar id="otbFooter">
-							<ToolbarSpacer id = "tbls"/>
-							
-							<Button id="btnAcc"  type="Accept" text="Action button" width="10%" press=".oAccept">
-								<layoutData>
-									<!-- <OverflowToolbarLayoutData priority="NeverOverflow"/> -->
-									<FlexItemData id = "fxid" growFactor="2" />
-								</layoutData>
-							</Button>
-							<Button id="btnCan" class = "intBtnF" type="Reject" text="Cancel" width="10%" press="oReject">
-								<layoutData>
-									<OverflowToolbarLayoutData id = "ofld" priority="NeverOverflow"/>
-								</layoutData>
-							</Button>
-								
-							<ToolbarSpacer id = "tbsr"/>
-						</OverflowToolbar>
-					</footer>
-     
+                <ToolbarSpacer id="tbsr" />
+            </OverflowToolbar>
+        </footer>
     </Page>
 </mvc:View>

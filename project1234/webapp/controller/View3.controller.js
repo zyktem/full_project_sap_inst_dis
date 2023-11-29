@@ -13,9 +13,6 @@ sap.ui.define([
             },
             //selection of the insatll action
             oSelection:function(){
-
-                
-
                 this.getView().byId("btnAcc").setText("Install")
             },
             //selection of the Dismantle action
@@ -26,12 +23,6 @@ sap.ui.define([
             oReject:function(){
                 this.getView().byId("inEqui").setValue(null);
                 this.getView().byId("inFunloc").setValue(null)
-            },
-            //install buton action in footer
-            oAccept:function(){
-                console.log("hello")
-
-                
             }
             
 
