@@ -16,14 +16,14 @@
             alignItems="Center"
             justifyContent="Center"
         >
-            <ToggleButton
+            <Button
                 id="tb1"
                 text="Install"
                 type="Default"
                 class="mtbtn"
                 press="oSelection"
             />
-            <ToggleButton
+            <Button
                 id="tb2"
                 text="Dismantle"
                 type="Default"
