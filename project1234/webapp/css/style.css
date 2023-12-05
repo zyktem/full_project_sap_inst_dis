@@ -1,28 +1,15 @@
-/* Enter your custom styles here */
-/* for button size and text size */
-
-.mtbtn{
-    display: inline-block;
-    
-   
-   
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 200px;
-   
-    
-    margin: 5px;
-    
-
+/* .sapMFlexItemAlignAuto {
+    align-self: center;
 }
-.sapUiSizeCompact .sapMBtnInner {
-    height: 2.625rem;
-    min-width: 3rem;
+.eleMnt{
+    align-items: center;
+    align-self: center;
+    align-content: center;
 }
-
-.sapMBtnInner {
+.pnlCen{
+    padding: .5rem;
+}
+/* .sapMBtnInner {
     font-size: 1.5rem;
     height: 2.25rem;
     min-width: 2.25rem;
@@ -33,37 +20,148 @@
     border-radius: 0.5rem;
     text-shadow: none;
 }
-html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX {
-    background-color: #2f3c48;
-    border-top: 1px solid #475b6d;
-    padding-bottom: 2.5rem;
-    padding-top: 1rem;
+ .sapMBtnInner {
+    height: 2.625rem;
+    min-width: 3rem;
+} 
+.myBtn{
+    height: 3.625rem;
+    margin: 5px;
+    padding: 10px;
+    font-size: 1.5rem;
+    min-width: 2.25rem;
+    border-radius: 0.5rem;
+    
+  
 }
-.sapMLabel {
-    color: #666666;
-    font-size: 1rem;
-    font-family: "72","72full",Arial,Helvetica,sans-serif;
-    font-weight: normal;
-    display: inline-block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    cursor: text;
-    padding: 1rem;
+/* .sapUiSizeCompact .sapMBtnInner {
+    height: 2.625rem;
+    min-width: 3rem;
+    
+    
+
+
+} */
+
+ /* /* .sapUiSizeCompact .sapMBtnContent {
+    line-height: 2.5rem;
+}  
+
+
+.myLable{
+    font-size: larger;
 }
-.sapMTitleStyleAuto {
-    font-size: 1.2rem;
-}
-/* setting in the center of the page */
-.sapMFlexBoxJustifyStart {
-    justify-content: center;
-}
-/* alignment of lable and input field */
-.sapMFlexItemAlignAuto {
-    align-self: center;
-}
-.sapUiFormResGridCont > div {
-    padding: 18px 0.25rem;
-    box-sizing: border-box;
+.newBtn{
+     font-size: 0.875rem;
+        height: 2.25rem;
+        min-width: 2.25rem;
+        margin: 22px;
+        padding: 8px;
+        text-align: center;
+        position: relative;
+        border-radius: 0.5rem;
+        text-shadow: none;
+  
 }
 
+.largeButton {
+    height: 50px ;
+    min-width: 120px ;
+}
+.sapMBtnInner {
+    font-size: 1.5rem;
+    height: 2.25rem;
+    min-width: 2.25rem;
+    margin: 0px;
+    padding: 9px;
+    text-align: center;
+    position: relative;
+    border-radius: 0.5rem;
+    text-shadow: none;
+}
+
+				.mtbtn{    display: inline-block;
+        
+       
+       
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+     width: 200px;
+       
+        
+        margin: 5px; } */
+
+
+
+
+        .mtbtn{
+            display: inline-block;
+            
+           
+           
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+           
+            
+            margin: 5px;
+        }
+        .sapUiSizeCompact .sapMBtnInner {
+            height: 2.625rem;
+            min-width: 3rem;
+        }
+        
+        .sapMBtnInner {
+            font-size: 1.5rem;
+            height: 2.25rem;
+            min-width: 2.25rem;
+            margin: 5px;
+            padding: 7px;
+            text-align: center;
+            position: relative;
+            border-radius: 0.5rem;
+            text-shadow: none;
+        }
+        html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX {
+            background-color: #2f3c48;
+            border-top: 1px solid #475b6d;
+            padding-bottom: 2.5rem;
+            padding-top: 1rem;
+        }
+        .sapMLabel {
+            color: #666666;
+            font-size: 1.2rem;
+            font-family: "72","72full",Arial,Helvetica,sans-serif;
+            font-weight: normal;
+            display: inline-block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: text;
+        }
+        .sapMTitleStyleAuto {
+            font-size: 1.2rem;
+        }
+        
+
+        .panCss {
+            padding: 6rem 0.75rem;
+            box-sizing: border-box;
+        }
+        
+       
+        .sapUiSizeCompact .sapMBtnInner.sapMBtnText {
+            padding-left: 0.4375rem;
+            padding-right: 0.4375rem;
+            padding-top: 2rem;
+        }
+        
+        .sapUiSizeCompact .sapMBtnInner {
+            font-size: larger;
+            height: 5.625rem;
+            min-width: 3rem;
+        }
