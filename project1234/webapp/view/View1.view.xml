@@ -11,42 +11,51 @@
         id="page"
         title="{i18n>title}"
     >
-       
-        <Panel>
-            <FlexBox renderType="Div">
-                <Label
-                    id="eqiLab"
-                    text="Equipment No"
-                    required="true"
-                />
-                <layoutData>
-                    <FlexItemData growFactor="1" />
-                </layoutData>
-                <Input
-                    id="equiInp"
-                    placeholder="Enter Equipment No."
-                    width="15rem"
-                    valueHelpRequest="equipmentValueHelpRequested"
-                    showValueHelp="true"
-                />
-            </FlexBox>
-        </Panel>
-        <FlexBox
-            height="100px"
-            alignItems="Start"
+        <ToolbarSpacer />
+        <HBox
+            alignItems="Center"
             justifyContent="Center"
         >
-            <Button
-                id="chkBtn"
-                text="Submit"
-                press="onPress"
+            <ToggleButton
+                id="tb1"
+                text="Install"
+                type="Default"
+                class="mtbtn"
+                press="oSelection"
             />
-			<Button
-                id="forSerialize"
-                text="For serialize equip"
-                press="onSerial"
+            <ToggleButton
+                id="tb2"
+                text="Dismantle"
+                type="Default"
+                class="mtbtn"
+                press="oSelection"
             />
+        </HBox>
+        <ToolbarSpacer />
 
-        </FlexBox>
+        <form:SimpleForm class="panCss">
+            <HBox
+                justifyContent="Center"
+                alignContent="Center"
+                alignItems="Center"
+                fitContainer="true"
+            >
+                <items>
+                    <Label
+                        id="eqiLab"
+                        text="Equipment No"
+                    />
+
+                    <ToolbarSpacer />
+                    <Input
+                        id="equiInp"
+                        placeholder="Enter Equipment No."
+                        width="15rem"
+                        valueHelpRequest="equipmentValueHelpRequested"
+                        showValueHelp="true"
+                    />
+                </items>
+            </HBox>
+        </form:SimpleForm>
     </Page>
 </mvc:View>
