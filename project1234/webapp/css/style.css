@@ -47,10 +47,9 @@
     line-height: 2.5rem;
 }  
 
+*/
 
-.myLable{
-    font-size: larger;
-}
+/*
 .newBtn{
      font-size: 0.875rem;
         height: 2.25rem;
@@ -103,28 +102,30 @@
            
             color: #FFFFFF;
             text-align: center;
-            font-size: 28px;
+            font-size: 23px;
             padding: 20px;
             width: 200px;
            
             
-            margin: 5px;
+            margin: 2px;
         }
         .sapUiSizeCompact .sapMBtnInner {
             height: 2.625rem;
-            min-width: 3rem;
+            min-width: 2.5rem;
         }
         
         .sapMBtnInner {
             font-size: 1.5rem;
             height: 2.25rem;
-            min-width: 2.25rem;
-            margin: 5px;
+            min-width: 2rem;
+            margin: 31px;
             padding: 7px;
             text-align: center;
             position: relative;
-            border-radius: 0.5rem;
-            text-shadow: none;
+            border-radius: 1.5rem;
+            
+            background-clip: padding-box;
+            box-sizing: border-box;
         }
         html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX {
             background-color: #2f3c48;
@@ -165,3 +166,20 @@
             height: 5.625rem;
             min-width: 3rem;
         }
+        .labFld{
+            font-size: x-large;
+        }
+        .sapMInputBaseInner{
+            font-size: 1.8rem;
+        }
+          
+       .sapMInputBaseContentWrapper{
+            height: 3rem !important;
+            }
+            .sapMInputBase{
+            height: 3rem !important;
+            }
+            .panCssv2 {
+                padding: 0rem 0.75rem;
+                box-sizing: border-box;
+            }
