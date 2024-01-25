@@ -1,0 +1,308 @@
+/* Enter your custom styles here */
+
+/*.mtbtn .sapMBtnInner {*/
+/*    font-size: 1.3rem;*/
+/*    height: 4.25rem;*/
+/*    min-width: 0rem;*/
+/*    margin: 32px;*/
+/*    padding: 11px;*/
+/*    text-align: center;*/
+/*    position: relative;*/
+/*    background-clip: padding-box;*/
+/*    box-sizing: border-box;*/
+
+/*}*/
+/*.mtbtn .sapMBtnInner {*/
+/*    display: flex;*/
+/*    font-size: 1.3rem;*/
+/*    height: 4.25rem;*/
+/*    min-width: 10rem;*/
+/*    margin: 32px;*/
+/*    padding: 11px;*/
+    /* text-align: initial; */
+/*    position: relative;*/
+/*    background-clip: padding-box;*/
+/*    box-sizing: border-box;*/
+/*    flex-wrap: wrap;*/
+/*    align-content: center;*/
+/*}*/
+
+
+.mtbtn .sapMBtnInner {
+    display: flex;
+    font-size: 1.3rem;
+    height: 4.25rem;
+    min-width: 10rem;
+    margin: 32px;
+    padding: 11px;
+    text-align: initial;
+    position: relative;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+}
+.sapUiFormLblColon .sapMLabel {
+    display: inline-block;
+    position: relative;
+    padding-right: 0.85em;
+    margin-top: .80rem; 
+}
+
+ 
+ 
+html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX {
+    background-color: #2f3c48;
+    border-top: 1px solid #475b6d;
+    padding-bottom: 2.5rem;
+    padding-top: 1rem;
+}
+
+.sapMLabel {
+    color: #666666;
+    font-size: 1.2rem;
+    font-family: "72", "72full", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: text;
+}
+
+.sapMTitleStyleAuto {
+    font-size: 1.2rem;
+}
+
+
+.panCss {
+    padding: 0rem 0.75rem;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/*.labFld {*/
+/*    font-size: x-large;*/
+/*}*/
+
+/*.sapMInputBaseInner {*/
+/*    font-size: x-large;*/
+/*}*/
+
+.sapMInputBaseContentWrapper {
+    height: 3rem !important;
+}
+
+.sapMInputBase {
+    height: 3rem !important;
+}
+
+
+.sapMTextLineClamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-size: x-large;
+}
+
+.sapUiFormM:not(.sapUiFormEdit) .sapUiFormResGridCont>div {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-right: 1rem;
+}
+
+/*.sapMGTHdrContent {*/
+/*    height: 5.625rem;*/
+/*    padding-top: 4.5rem;*/
+/*    padding-left: 1rem;*/
+/*    padding-right: 1rem;*/
+
+/*}*/
+
+@media only screen and (max-width: 600px) {
+  .responsiveText .sapMGTTitle .sapMTextLineClamp  {
+      font-size: 1rem;
+      
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .sapUiResponsiveMargin .sapMMessageBox {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    /* Adjust the OK button for smaller screens */
+    .sapUiResponsiveMargin .sapMMessageBox .sapMBtn {
+        width: 100%; /* Make the button take full width */
+    }
+}
+
+@media only screen and (max-width: 600px){
+     .responsiveText .labFld .sapMInputBaseInner {
+    
+         font-size: 1rem;
+    }
+    .sapMTileCntContent>.sapMTcInnerMarker {
+    font-size: large;
+    vertical-align: bottom;
+    line-height: normal;
+    align-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+}
+
+/*@media screen and (max-width: 600px) {*/
+/*    .mtbtn .sapMBtnInner {*/
+/*        font-size: 1rem;*/
+/*        height: 3.25rem;*/
+/*        min-width: 0rem;*/
+/*        margin: 0px;*/
+/*        padding: 6px;*/
+/*        text-align: center;*/
+/*        position: relative;*/
+/*        background-clip: padding-box;*/
+/*        box-sizing: border-box;*/
+        
+        
+        
+        
+        
+        
+/*    }*/
+/*}*/
+
+
+
+
+    /* Additional styles for mobile devices */
+    .sapUiRespGrid.sapUiRespGridVSpace0 > div {
+        margin-bottom: -0.4rem;
+    }
+
+    /* Styles for .sapMLabel on mobile devices */
+    .sapMLabel {
+        color: #666666;
+        font-size: 1.17rem;
+        font-family: "72", "72full", Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: text;
+    }
+
+
+@media screen and (max-width: 600px) {
+    .sapUiRespGrid.sapUiRespGridVSpace0 > div {
+        margin-bottom: -0.4rem;
+    }
+}
+
+
+.sapMMessageBox .sapMMessageBoxFooter .sapMBtn:first-child {
+  /* Your styles for the OK button */
+  /* For example, adjusting width for responsiveness */
+  width: 100%; /* Make the button take full width */
+}
+
+/*.customHbx .sapMFlexBoxJustifySpaceBetween {*/
+/*    justify-content: space-evenly;*/
+/*}*/
+/*.sapMFlexBoxJustifyCenter {*/
+/*    justify-content: space-evenly;*/
+/*}*/
+/*.sapMBtnInner {*/
+/*    font-size: .875rem;*/
+/*    height: 8.25rem;*/
+/*    min-width: 2.25rem;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    text-align: center;*/
+/*    position: relative;*/
+/*    border-radius: 0.25rem;*/
+/*    text-shadow: none;*/
+/*    width: 17rem;*/
+/*}*/
+
+
+.sapUiTinyMargin {
+  margin: 8px; /* Adjust the margin as needed */
+}
+
+.smallTile {
+  width: 200px; /* Adjust the width as needed */
+}
+
+.centerForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.tilesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*.sapMFlexBoxJustifyCenter {*/
+/*    padding-left: 25rem;*/
+/*}*/
+/*#actIns .sapMBtnInner.sapMBtnText {*/
+/*    padding-left: 0.4375rem;*/
+/*    padding-right: 0.4375rem;*/
+/*    padding-top: 1.3rem;*/
+/*}*/
+
+.tileLayout {
+	float: left;
+}
+.sapMTileCntContent>.sapMTcInnerMarker {
+    vertical-align: bottom;
+    line-height: normal;
+    display: flex;
+    align-content: space-between;
+     flex-wrap: wrap; 
+    justify-content: space-evenly;
+      font-weight: 500;
+}
+
+.tileLayout .sapUiView {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/*.sapMTileCntContent>.sapMTcInnerMarker {*/
+/*    font-size: large;*/
+/*    vertical-align: bottom;*/
+/*    line-height: normal;*/
+/*    display: flex;*/
+/*    align-content: space-around;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: space-between;*/
+/*    font-weight: 500;*/
+/*}*/
+.sapMText {
+    display: inline-block;
+    box-sizing: border-box;
+    white-space: pre-line;
+    word-wrap: break-word;
+    cursor: text;
+    /* font-size:.875rem; */
+    font-family: "72","72full",Arial,Helvetica,sans-serif;
+    line-height: normal;
+    color: #1d2d3e;
+    font-size: 1.17rem;
+  
+}

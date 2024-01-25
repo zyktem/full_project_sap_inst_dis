@@ -1,0 +1,41 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" controllerName="com.sap.ZPMINSDISMVT.controller.Main" displayBlock="false">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<form:SimpleForm class="panCss" layout="ResponsiveGridLayout" adjustLabelSpan="true">
+							<form:content>
+								<Label id="eqiLab" text="{i18n>eqiLab}" class="labFld"/>
+								<Input id="equiInp" placeholder="{i18n>equiInp}" valueHelpRequest="equipmentValueHelpRequested" liveChange="onInputChange"
+									change="onChngToIns" showValueHelp="true"/>
+								<Label/>
+								<Input id="discInp" placeholder="{i18n>discInp}" visible="true" value="{localModel>/Eqktu}" editable="false"/>
+							</form:content>
+						</form:SimpleForm>
+						<!--<form:SimpleForm class="panCss" layout="ResponsiveGridLayout" labelSpanS="1" adjustLabelSpan="true" labelSpanL="1" labelSpanM="2">-->
+						<!--	<GenericTile xmlns="sap.m" id="installTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="{i18n>installTile}" press="onPressIns"-->
+						<!--		size="S" mode="HeaderMode" sizeBehavior="Small"/>-->
+						<!--	<GenericTile id="dismantleTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop " header="{i18n>dismantleTile}" press="onPressDis"-->
+						<!--		sizeBehavior="Small"/>-->
+						<!--</form:SimpleForm>-->
+					
+						<form:SimpleForm class="panCss" layout="ResponsiveGridLayout" labelSpanS="1" adjustLabelSpan="true" labelSpanL="1" labelSpanM="2">
+							<GenericTile id="installTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout responsiveText" layout="ResponsiveGridLayout" press="onPressIns">
+								<TileContent>
+									<Text text="Install"></Text>
+								</TileContent>
+							</GenericTile>
+							<GenericTile id="dismantleTile" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayou responsiveTextt" layout="ResponsiveGridLayout" press="onPressDis">
+								<TileContent>
+									<Text text="Dismantle"></Text>
+								</TileContent>
+							</GenericTile>
+						</form:SimpleForm>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

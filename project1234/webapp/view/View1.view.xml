@@ -1,4 +1,4 @@
-<mvc:View
+<mvc:View xmlns:f2="sap.f"
     xmlns:form="sap.ui.layout.form"
     controllerName="project1234.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
@@ -11,51 +11,78 @@
         id="page"
         title="{i18n>title}"
     >
+   
+     
+   <form:SimpleForm class="panCss"  layout="ResponsiveGridLayout" labelSpanS="3" adjustLabelSpan="true"  labelSpanL="3" labelSpanM="3" >
+   
+
+        <GenericTile  class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout largeText"  width="auto" header="Install"  press="actionIns" 
+		>
+		<TileContent >
+        
+			
+		</TileContent>
+	</GenericTile>
+    
+
+     <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" width="auto" header="Dismantle"   press="onPress"
+		>
+		<TileContent >
+			
+		</TileContent>
+	</GenericTile>
+    
+  
+   </form:SimpleForm> 
+
+
+
+
+
+<!-- buttons for insatll and diamantle -->
+
+<!-- 
         <ToolbarSpacer />
         <HBox
             alignItems="Center"
             justifyContent="Center"
         >
             <Button
-                id="tb1"
-                text="Install"
+                id="instBtn"
+                text="{i18n>Install}"
                 type="Default"
                 class="mtbtn"
-                press="oSelection"
+                press="actionIns"
             />
             <Button
-                id="tb2"
-                text="Dismantle"
+                id="distBtn"
+                text="{i18n>Dismantle}"
                 type="Default"
                 class="mtbtn"
-                press="oSelection"
+                press="actionDis"
             />
         </HBox>
-        <ToolbarSpacer />
+        <ToolbarSpacer /> -->
 
-        <form:SimpleForm class="panCss">
-            <HBox
-                justifyContent="Center"
-                alignContent="Center"
-                alignItems="Center"
-                fitContainer="true"
-            >
-                <items>
+         
+            
+               
                     <Label
                         id="eqiLab"
                         text="Equipment No"
+                        class="labFld"
                     />
 
-                    <ToolbarSpacer />
+                   
                     <Input
+                       
                         id="equiInp"
                         placeholder="Enter Equipment No."
-                        width="15rem"
+                        
                         valueHelpRequest="equipmentValueHelpRequested"
                         showValueHelp="true"
                     />
-                </items>
-            </HBox>
-        </form:SimpleForm>
+                    <Button id = "frag" text="fragment" press="testBtnFrag"></Button>
+       
     </Page>
 </mvc:View>

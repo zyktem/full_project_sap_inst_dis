@@ -1,0 +1,22 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:form="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="com.sap.ZPMINSDISMVT.controller.Nserins">
+	<App autoFocus = "false">
+		<pages>
+			<Page title="{i18n>nonSerTitle}" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<form:SimpleForm class="panCssv2" layout="ResponsiveGridLayout" labelSpanS="12" adjustLabelSpan="true" labelSpanXL="4" labelSpanL="3" labelSpanM="4">
+						<Label id="equSeri" text="{i18n>eqiLab}" labelFor="input-a" class="labFld"/>
+						 <!--changed the  value="{localModel>/IEquipment}" to Equipment-->
+						<Input id="inEqui" value="{localModel>/IEquipment}"  editable="false" class="inFld"/>
+						<ToolbarSpacer/>
+						<Label id="_IDGenLabel7" text="{i18n>FuncLocLab}" labelFor="input-a" class="labFld"/>
+						<Input id="inFunloc"  valueHelpRequest = "funcDialog" showValueHelp="true" change = "onNonSerIns" class="inFld"/>
+						<ToolbarSpacer/>
+					</form:SimpleForm>
+					<HBox alignItems="Center" justifyContent="Center">
+						<Button id="actnV2" class="mtbtn" press="oActnInsNonSer" text="{i18n>actnV3}"/>
+					</HBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,32 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml" controllerName="com.sap.ZPMINSDISMVT.controller.Serins">
+	<App autoFocus="false">
+		<pages>
+			<Page title="{i18n>serTitle}" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<f:SimpleForm id="smpfromSeri" class="panCssv2" layout="ResponsiveGridLayout" labelSpanS="12" adjustLabelSpan="true" labelSpanXL="4"
+						labelSpanL="3" labelSpanM="4">
+						<Label id="euiLab" text="{i18n>eqiLab}" labelFor="input-a" class="labFld"/>
+						<Input id="inEqui" class="inFld" value="{localModel>/IEquipment}" editable="false"/>
+						<ToolbarSpacer/>
+						<Label id="mapLab" text="{i18n>mapLab} " labelFor="input-a" class="labFld"/>
+						<Input id="inMat" visible="true" value="{localModel>/IMaterial}" editable="false" class="inFld"/>
+						<ToolbarSpacer/>
+						<Label id="sirLab" text="{i18n>sirLab}" labelFor="input-a" class="labFld"/>
+						<Input id="inSir" visible="true" value="{localModel>/ISerialnumber}" editable="false" class="inFld"/>
+						<ToolbarSpacer/>
+						<Label id="strgLab" text="{i18n>strgLab}" labelFor="input-a" class="labFld"/>
+						<Input id="inStrg" visible="true" class="inFld" value="{localModel>/StgeLoc}" editable="false"/>
+						<ToolbarSpacer/>
+						<Label id="FuncLocLab" text="{i18n>FuncLocLab}" labelFor="input-a" class="labFld"/>
+						<Input id="FuncLocInp" showValueHelp="true" change="onChange" class="inFld" valueHelpRequest="funcDialog"/>
+						<ToolbarSpacer/>
+					</f:SimpleForm>
+					<HBox id="hbxseri" alignItems="Center" justifyContent="Center">
+						<Button id="actIns" class="mtbtn" press="oSerIns" text="{i18n>actnV3}"/>
+					</HBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

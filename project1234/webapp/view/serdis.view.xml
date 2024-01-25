@@ -1,0 +1,118 @@
+<mvc:View
+    xmlns:tnt="sap.tnt"
+    xmlns:form="sap.ui.layout.form"
+    controllerName="project1234.controller.serdis"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+            <Page
+                id="page"
+                title="{i18n>title}"
+            >
+                <f:SimpleForm
+                    class="panCssv2"
+                    layout="ResponsiveGridLayout"
+                    labelSpanS="12"
+                    adjustLabelSpan="true"
+                    labelSpanXL="4"
+                    labelSpanL="3"
+                    labelSpanM="4"
+                >
+                    <Label
+                        id="euiLab"
+                        text="Equipment"
+                        labelFor="input-a"
+                        required="true"
+                        class="labFld"
+                    />
+                    <Input
+                        id="inEqui"
+                        valueHelpRequest="equipmentValueHelpRequested"
+                        showValueHelp="true"
+                        class="inFld"
+                        value="10005954"
+                        editable="false"
+                    />
+                    <ToolbarSpacer />
+
+                    <Label
+                        id="mapLab"
+                        text="Material No."
+                        labelFor="input-a"
+                        class="labFld"
+                    />
+                    <Input
+                        id="inMat"
+                        visible="true"
+                        valueHelpRequest="FuncSupValHelpReq"
+                        showValueHelp="true"
+                        value="90117063"
+                        editable="false"
+                        class="inFld"
+                    />
+                    <ToolbarSpacer />
+                    <Label
+                        id="sirLab"
+                        text="Serial No."
+                        labelFor="input-a"
+                        class="labFld"
+                    />
+                    <Input
+                        id="inSir"
+                        visible="true"
+                        valueHelpRequest="FuncSupValHelpReq"
+                        showValueHelp="true"
+                        value="10005154"
+                        editable="false"
+                        class="inFld"
+                    />
+                    <ToolbarSpacer />
+                    <Label
+                        id="strgLab"
+                        text="Storage Loc"
+                        labelFor="input-a"
+                        class="labFld"
+                    />
+                    <Input
+                        id="inStrg"
+                        visible="true"
+                        valueHelpRequest="FuncSupValHelpReq"
+                        showValueHelp="true"
+                        class="inFld"
+                    />
+                    <ToolbarSpacer />
+                    <Label
+                        id="FuncLocLab"
+                        text="Func.Loc/Superord.Equip"
+                        labelFor="input-a"
+                        class="labFld"
+                    />
+                    <Input
+                        id="FuncLocInp"
+                        visible="true"
+                        valueHelpRequest="FuncSupValHelpReq"
+                        showValueHelp="true"
+                        class="inFld"
+                    />
+                    <ToolbarSpacer />
+                </f:SimpleForm>
+                <HBox
+                    alignItems="Center"
+                    justifyContent="Center"
+                >
+                    <Button
+                        id="actnV3"
+                        class="mtbtn"
+                        press="oAction"
+                        text="Dismantle"
+                        ariaHasPopup="Dialog"                    />
+                </HBox>
+            </Page>
+        </App>
+    </Shell>
+</mvc:View>

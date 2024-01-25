@@ -1,0 +1,59 @@
+<mvc:View
+    controllerName="installdismantle.controller.View1"
+   xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    displayBlock="true"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <ToolbarSpacer />
+        <HBox
+            alignItems="Center"
+            justifyContent="Center"
+        >
+            <Button
+                id="instBtn"
+                text="{i18n>Install}"
+                type="Default"
+                class="mtbtn"
+                press="actionIns"
+            />
+            <Button
+                id="distBtn"
+                text="{i18n>Dismantle}"
+                type="Default"
+                class="mtbtn"
+                press="actionDis"
+            />
+        </HBox>
+        <ToolbarSpacer />
+
+        <form:SimpleForm
+            class="panCss"
+            layout="ResponsiveGridLayout"
+            labelSpanS="12"
+            adjustLabelSpan="true"
+            labelSpanXL="4"
+            labelSpanL="3"
+            labelSpanM="4"
+        >
+            <Label
+                id="eqiLab"
+                text="Equipment No"
+                class="labFld"
+            />
+
+            <Input
+                id="equiInp"
+                placeholder="Enter Equipment No."
+                valueHelpRequest="equipmentValueHelpRequested"
+                showValueHelp="true"
+            />
+            <ToolbarSpacer />
+        </form:SimpleForm>
+    </Page>
+</mvc:View>

@@ -1,0 +1,75 @@
+<mvc:View
+    xmlns:tnt="sap.tnt"
+    xmlns:form="sap.ui.layout.form"
+    controllerName="project1234.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <form:SimpleForm
+            class="panCssv2"
+            layout="ResponsiveGridLayout"
+            labelSpanS="12"
+            adjustLabelSpan="true"
+            labelSpanXL="4"
+            labelSpanL="3"
+            labelSpanM="4"
+        >
+            <Label
+                id="equSeri"
+                text="Equipment No"
+                labelFor="input-a"
+                class="labFld"
+            />
+
+            <Input
+                id="inEqui"
+                valueHelpRequest="equipmentValueHelpRequested"
+                showValueHelp="true"
+                value="1000500"
+                editable="false"
+                class="inFld"
+            />
+
+            <ToolbarSpacer />
+
+            <Label
+                id="_IDGenLabel7"
+                text="Func.Loc/Superord.Equip"
+                labelFor="input-a"
+                class="labFld"
+            />
+
+            <Input
+                id="inFunloc"
+                visible="true"
+                valueHelpRequest="FuncSupValHelpReq"
+                showValueHelp="true"
+                class="inFld"
+            />
+            <ToolbarSpacer />
+        </form:SimpleForm>
+
+        <HBox
+            alignItems="Center"
+            justifyContent="Center"
+        >
+            <Button
+                id="actnV2"
+                class="mtbtn"
+                press="oAction"
+                text ="Dismantle"
+                ariaHasPopup="Dialog"
+            />
+            <!-- <Button id ="testBtn"
+            press = "testAct"
+            text ="test"></Button> -->
+        </HBox>
+    </Page>
+</mvc:View>

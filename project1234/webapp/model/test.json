@@ -1,0 +1,30 @@
+{
+    "serialize" : [
+     {
+        "euip":"10005954",
+        "matNo":"90117063",
+        "serialNo":"10005954",
+        "strgLoc":"6018"
+     },
+     {
+        "euip":"10005955",
+        "matNo":"90117064",
+        "serialNo":"10005955",
+        "strgLoc":"6001"
+     },
+     {
+        "euip":"10005957",
+        "matNo":"90117065",
+        "serialNo":"10005957",
+        "strgLoc":"6001"
+     }
+    ],
+    "NonSeri":[
+        {
+            "equip":"",
+            "matNo":"",
+            "serialNo":"",
+            "strogeLoc":""
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+<!--<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">-->
+<!--	<SelectDialog noDataText="{i18n>NoEquipmentFound}" title="{i18n>SelectEquipment}" search="equipmentsearch" confirm="EquipmentHandelConfirm"-->
+<!--		cancel="EquipmentHandelCancel" items="{path: 'localModel>/ZsrhHelpIdSet'}">-->
+<!--		<StandardListItem id="sltdiag" title="{localModel>Equnr}" description="{localModel>Eqtyp}" info="{localModel>Eqktu}" />-->
+<!--	</SelectDialog>-->
+<!--</core:FragmentDefinition>-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+	<Dialog id="AdminVH" class="sapUiPopupWithPadding" title="Import from Excel" resizable="false" draggable="false" showHeader="false"
+		horizontalScrolling="false" contentWidth="850px">
+		<endButton>
+			<Button id="closeVHAdmin" text="Close" type="Ghost" press="onpressCloseValueHelpAdmin"/>
+		</endButton>
+	
+		<customHeader >
+			<Bar>
+				<contentMiddle>
+					<Title text="{i18n>eqiLab}"/>
+				</contentMiddle>
+				<contentRight>
+					<SearchField id="_IDGenSearchField1" search=".equipmentsearch" width="100%"/>
+				</contentRight>
+			</Bar>
+
+		</customHeader>
+		<content>
+			<List id="idList" items="{/ZsrhHelpIdSet}"  growing="true" growingThreshold="50"
+				includeItemInSelection="true" rememberSelections="false">
+				<infoToolbar>
+					<OverflowToolbar visible="false" id="idInfoToolbar">
+						<Label id="idFilterLabel"/>
+					</OverflowToolbar>
+				</infoToolbar>
+				<StandardListItem id="_IDGenStandardListItem1" title="{Equnr}" description="{Eqktu}" info="{Eqtyp}" iconDensityAware="false"
+					iconInset="false"  press = "EquipmentHandelConfirm" type = "Navigation"/>
+			</List>
+
+		</content>
+	</Dialog>
+</core:FragmentDefinition>

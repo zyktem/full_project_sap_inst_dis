@@ -1,0 +1,34 @@
+
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+	<Dialog id="digFunloc" class="sapUiPopupWithPadding" title="{i18n>FuncLocLab}" resizable="false" draggable="false" showHeader="false"
+		horizontalScrolling="false" contentWidth="850px">
+		<endButton>
+			<Button id="closeVHAdmin" text="Close"  type="Ghost" press="closeFunc"/>
+		</endButton>
+	
+		<customHeader >
+			<Bar>
+				<contentMiddle>
+					<Title text="{i18n>FuncLocLab}"/>
+				</contentMiddle>
+				<contentRight>
+					<SearchField id="serFunc" search=".funcSearch" width="100%"/>
+				</contentRight>
+			</Bar>
+
+		</customHeader>
+		<content>
+			<List id="listFunc" items="{/ZshFuncLocSet}"  growing="true" growingThreshold="50"
+				includeItemInSelection="true" rememberSelections="false">
+				<infoToolbar>
+					<OverflowToolbar visible="false" id="idInfoToolbar">
+						<Label id="idFilterLabel"/>
+					</OverflowToolbar>
+				</infoToolbar>
+				<StandardListItem id="stnItmFun" title="{Tplnr}" description="{Pltxt}" info="{Fltyp}" iconDensityAware="false"
+					iconInset="false"  press = "funcHandelConfirm" type = "Navigation"/>
+			</List>
+
+		</content>
+	</Dialog>
+</core:FragmentDefinition>

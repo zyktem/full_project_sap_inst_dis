@@ -8,131 +8,72 @@
     displayBlock="true"
     xmlns="sap.m"
 >
-    <Shell id="shell">
-        <App id="app">
-            <Page
-                id="page"
-                title="{i18n>title}"
-            >
-                <Panel>
-                    <FlexBox
-                        justifyContent="SpaceAround"
-                        alignItems="Center"
-                        class="myFlexContainer"
-                    >
-                        <Title text="Without Serial no." />
-                    </FlexBox>
-                </Panel>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <form:SimpleForm
+            class="panCssv2"
+            layout="ResponsiveGridLayout"
+            labelSpanS="12"
+            adjustLabelSpan="true"
+            labelSpanXL="4"
+            labelSpanL="3"
+            labelSpanM="4"
+        >
+            <Label
+                id="equSeri"
+                text="Equipment No"
+                labelFor="input-a"
+                class="labFld"
+            />
 
-                <FlexBox
-                    id="flbx"
-                    height="100px"
-                    alignItems="Start"
-                    justifyContent="Center"
-                >
-                    <ToggleButton
-                        id="instBtn"
-                        text="Install"
-                        type="Emphasized"
-                        class="mtbtn"
-                        press ="oSelection"
-                    />
-                    <ToggleButton
-                        id="distBtn"
-                        text="Dismantle"
-                        type="Reject"
-                        class="mtbtn"
-                        press="oSelectionD"
-                    />
-                </FlexBox>
+            <Input
+                id="inEqui"
+                valueHelpRequest="equipmentValueHelpRequested"
+                showValueHelp="true"
+                value="1000500"
+                editable="false"
+                class="inFld"
+            />
 
-                <Panel>
-                    <f:SimpleForm
-                        id="SimpleFormToolbar"
-                        editable="true"
-                        layout="ResponsiveGridLayout"
-                        labelSpanXL="4"
-                        labelSpanL="3"
-                        labelSpanM="4"
-                        labelSpanS="12"
-                        adjustLabelSpan="true"
-                        visible="true"
-                    >
-                        <Label
-                            id="_IDGenLabel4"
-                            text="Equipment"
-                            labelFor="input-a"
-                            required="true"
-                        />
-                        <Input
-                            id="inEqui"
-                            valueHelpRequest="equipmentValueHelpRequested"
-                            showValueHelp="true"
-                            width="15rem"
-                        />
-                        <Label
-                            id="_IDGenLabel5"
-                            text="Func.Loc/Superord.Equip"
-                            required="true"
-                            labelFor="input-a"
-                        />
-                        <SearchField
-                            width="15rem"
-                            visible="false"
-                            id="ser"
-                            search="onSearch"
-                        />
-                        <Label
-                            id="_IDGenLabel7"
-                            text="Func.Loc/Superord.Equip"
-                            labelFor="input-a"
-                        />
-                        <Input
-                            id="inFunloc"
-                            visible="true"
-                            valueHelpRequest="FuncSupValHelpReq"
-                            showValueHelp="true"
-                            value="{/Equipment/Funcloc}"
-                            width="15rem"
-                        />
-                        <!--<Label id="_IDGenLabel8" text="{i18n>labSup}" labelFor="input-a"/>-->
-                        <!--<Input id="input-superord.equip" width="20rem"/>-->
-                    </f:SimpleForm>
-                </Panel>
+            <ToolbarSpacer />
 
-                <footer>
-                    <Toolbar id="otbFooter">
-                        <ToolbarSpacer />
-                        <Button
-                            id="btnAcc"
-                            type="Accept"
-                            text="Install"
-                            press=".oAccept"
-                            width="30%"
-                            class="mtbtn"
-                        >
-                            <layoutData>
-                                <!--<OverflowToolbarLayoutData priority="NeverOverflow"/>-->
-                                <FlexItemData growFactor="2" />
-                            </layoutData>
-                        </Button>
-                        <Button
-                            id="btnCan"
-                            type="Reject"
-                            text="Cancel"
-                            press="oReject"
-                            width="30%"
-                            class="mtbtn"
-                        >
-                            <layoutData>
-                                <!--<OverflowToolbarLayoutData priority="NeverOverflow"/>-->
-                                <FlexItemData growFactor="2" />
-                            </layoutData>
-                        </Button>
-                        <ToolbarSpacer />
-                    </Toolbar>
-                </footer>
-            </Page>
-        </App>
-    </Shell>
+            <Label
+                id="_IDGenLabel7"
+                text="Func.Loc/Superord.Equip"
+                labelFor="input-a"
+                class="labFld"
+            />
+
+            <Input
+                id="inFunloc"
+                visible="true"
+                valueHelpRequest="FuncSupValHelpReq"
+                showValueHelp="true"
+                class="inFld"
+            />
+            <ToolbarSpacer />
+        </form:SimpleForm>
+
+        <HBox
+            alignItems="Center"
+            justifyContent="Center"
+        >
+            <Button
+                id="actnV2"
+                class="mtbtn"
+                press="oAction"
+                text="Insatll"
+                ariaHasPopup="Dialog"
+            />
+            <!-- <Button id ="testBtn"
+            press = "testAct"
+            text ="test"></Button> -->
+        </HBox>
+
+        
+
+
+    </Page>
 </mvc:View>

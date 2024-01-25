@@ -73,6 +73,10 @@
         "dataSource": "mainService",
         "preload": true,
         "settings": {}
+      },
+      "localModel":{
+        "type": "sap.ui.model.json.JSONModel"
+        
       }
     },
     "resources": {
@@ -113,12 +117,26 @@
           "target": [
             "TargetView3"
           ]
+        },
+        {
+          "name": "serdis",
+          "pattern": "dismantle",
+          "target": [
+            "serdis"
+          ]
+        },
+        {
+          "name": "nsirdis",
+          "pattern": "dismantle",
+          "target": [
+            "nssirdis"
+          ]
         }
       ],
       "targets": {
         "TargetView1": {
           "viewType": "XML",
-          "transition": "slide",
+          "transition": "show",
           "clearControlAggregation": false,
           "viewId": "View1",
           "viewName": "View1"
@@ -126,17 +144,31 @@
         
         "TargetView2": {
           "viewType": "XML",
-          "transition": "slide",
+          "transition": "show",
           "clearControlAggregation": false,
           "viewId": "View2",
           "viewName": "View2"
         },
         "TargetView3": {
           "viewType": "XML",
-          "transition": "slide",
+          "transition": "show",
           "clearControlAggregation": false,
           "viewId": "View3",
           "viewName": "View3"
+        },
+        "serdis": {
+          "viewType": "XML",
+          "transition": "show",
+          "clearControlAggregation": false,
+          "viewId": "serdis",
+          "viewName": "serdis"
+        },
+        "nsirdis": {
+          "viewType": "XML",
+          "transition": "show",
+          "clearControlAggregation": false,
+          "viewId": "nsirdis",
+          "viewName": "nsirdis"
         }
       }
     },

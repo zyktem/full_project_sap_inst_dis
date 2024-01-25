@@ -1,0 +1,88 @@
+/* Enter your custom styles here */ .mtbtn{
+            display: inline-block;
+            
+           
+           
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 23px;
+            padding: 20px;
+            width: 200px;
+           
+            
+            margin: 2px;
+        }
+        .sapUiSizeCompact .sapMBtnInner {
+            height: 2.625rem;
+            min-width: 2.5rem;
+        }
+        
+        .sapMBtnInner {
+            font-size: 1.5rem;
+            height: 2.25rem;
+            min-width: 2rem;
+            margin: 31px;
+            padding: 7px;
+            text-align: center;
+            position: relative;
+            border-radius: 1.5rem;
+            
+            background-clip: padding-box;
+            box-sizing: border-box;
+        }
+        html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX {
+            background-color: #2f3c48;
+            border-top: 1px solid #475b6d;
+            padding-bottom: 2.5rem;
+            padding-top: 1rem;
+        }
+        .sapMLabel {
+            color: #666666;
+            font-size: 1.2rem;
+            font-family: "72","72full",Arial,Helvetica,sans-serif;
+            font-weight: normal;
+            display: inline-block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: text;
+        }
+        .sapMTitleStyleAuto {
+            font-size: 1.2rem;
+        }
+        
+
+        .panCss {
+            padding: 6rem 0.75rem;
+            box-sizing: border-box;
+        }
+        
+       
+        .sapUiSizeCompact .sapMBtnInner.sapMBtnText {
+            padding-left: 0.4375rem;
+            padding-right: 0.4375rem;
+            padding-top: 2rem;
+        }
+        
+        .sapUiSizeCompact .sapMBtnInner {
+            font-size: larger;
+            height: 5.625rem;
+            min-width: 3rem;
+        }
+        .labFld{
+            font-size: x-large;
+        }
+        .sapMInputBaseInner{
+            font-size: 1.8rem;
+        }
+          
+       .sapMInputBaseContentWrapper{
+            height: 3rem !important;
+            }
+            .sapMInputBase{
+            height: 3rem !important;
+            }
+            .panCssv2 {
+                padding: 0rem 0.75rem;
+                box-sizing: border-box;
+            }
